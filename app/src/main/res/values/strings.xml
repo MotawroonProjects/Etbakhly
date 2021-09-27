@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Etbakhly</string>
+    <string name="field_req">Field Required</string>
+    <string name="phone">Phone</string>
+    <string name="login">Login</string>
+    <string name="banquet_and_events_services">Banquet and events services</string>
+    <string name="demand_from_independent_chefs">Demand from independent chefs</string>
+    <string name="order_food_carts_to_reach_you">Order food carts to reach you</string>
+    <string name="select_the_address">Select The Address</string>
+    <string name="confirm">confirm</string>
+    <string name="map_key" />
+    <string name="no_data_to_show">No Data To Show</string>
+    <string name="skip">Skip</string>
+    <string name="next">Next</string>
+    <string name="start">Start</string>
+    <string name="select_order">Select your order</string>
+    <string name="select_order_content">Select your order if you want to book a buffet or order from an independent chef or from a food cart</string>
+    <string name="choose_food">Choose your food from the menu online</string>
+    <string name="choose_kitchen">Choose the right kitchen for your occasion, whether it is a restaurant, independent chefs or mobile carts</string>
+    <string name="select_address">Select your address to receive your ord</string>
+    <string name="choose_right_kitchen">Choose the right kitchen for your occasion, whether it is a restaurant, independent chefs or mobile carts</string>
+    <string name="the_order">The Order</string>
+    <string name="do_you_have_a_coupon">Do you have a coupon?</string>
+    <string name="enter_the_coupon_here">Enter the coupon here</string>
+    <string name="total">Total</string>
+    <string name="tax">Tax</string>
+    <string name="drive">Drive</string>
+    <string name="total_summation">Total Summation</string>
+    <string name="complete_operation">Complete Operation</string>
+    <string name="offers">Offers</string>
+    <string name="profile">Profile</string>
+    <string name="orders">Orders</string>
+    <string name="cart">Cart</string>
+    <string name="home">Home</string>
+</resources>
