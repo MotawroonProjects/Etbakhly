@@ -47,17 +47,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
 
-                <com.google.android.material.tabs.TabLayout
-                    android:id="@+id/tab"
-                    android:layout_width="wrap_content"
-                    android:layout_height="7dp"
-                    android:layout_gravity="bottom"
-                    android:layout_margin="8dp"
-                    android:layout_marginBottom="8dp"
-                    app:tabGravity="fill"
-                    app:tabIndicatorHeight="0dp"
-                    app:tabMaxWidth="7dp"
-                    app:tabMode="scrollable" />
 
                 <ProgressBar
                     android:id="@+id/progBarSlider"
@@ -65,6 +54,18 @@
                     android:layout_height="35dp"
                     android:layout_gravity="center" />
             </FrameLayout>
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab"
+                android:layout_width="wrap_content"
+                android:layout_height="7dp"
+                android:layout_gravity="bottom|center"
+                android:layout_margin="5dp"
+                android:layout_marginBottom="8dp"
+                app:tabGravity="fill"
+                app:tabIndicatorHeight="0dp"
+                app:tabMaxWidth="7dp"
+                app:tabBackground="@drawable/tab_intdecator"
+                app:tabMode="scrollable" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -73,7 +74,7 @@
                 android:clickable="false"
                 android:longClickable="false"
                android:padding="10dp"
-                android:text="@string/banquet_and_events_services"
+                android:text="@string/the_most_famous_chef_in_your_area"
                 android:textColor="@color/black"
                 android:textSize="15sp"
                 android:textStyle="bold" />
@@ -81,9 +82,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:minHeight="200dp">
+                >
 
                 <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recviewMostFamous"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
@@ -92,6 +94,7 @@
                 <ProgressBar
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                  android:visibility="gone"
                     android:layout_gravity="center" />
 
                 <TextView
@@ -112,7 +115,7 @@
                 android:clickable="false"
                 android:longClickable="false"
                 android:padding="10dp"
-                android:text="@string/banquet_and_events_services"
+                android:text="@string/categories"
                 android:textColor="@color/black"
                 android:textSize="15sp"
                 android:textStyle="bold" />
@@ -120,9 +123,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:minHeight="200dp">
+                >
 
                 <androidx.recyclerview.widget.RecyclerView
+                   android:id="@+id/recviewCategory"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
@@ -131,6 +135,7 @@
                 <ProgressBar
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                   android:visibility="gone"
                     android:layout_gravity="center" />
 
                 <TextView
@@ -151,7 +156,7 @@
                 android:clickable="false"
                 android:longClickable="false"
                 android:padding="10dp"
-                android:text="@string/banquet_and_events_services"
+                android:text="@string/near_to_you"
                 android:textColor="@color/black"
                 android:textSize="15sp"
                 android:textStyle="bold" />
@@ -159,9 +164,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:minHeight="200dp">
+                >
 
                 <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recviewnear"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
@@ -170,6 +176,7 @@
                 <ProgressBar
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                  android:visibility="gone"
                     android:layout_gravity="center" />
 
                 <TextView
@@ -190,7 +197,7 @@
                 android:clickable="false"
                 android:longClickable="false"
                 android:padding="10dp"
-                android:text="@string/banquet_and_events_services"
+                android:text="@string/special_dishes"
                 android:textColor="@color/black"
                 android:textSize="15sp"
                 android:textStyle="bold" />
@@ -198,9 +205,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:minHeight="200dp">
+                >
 
                 <androidx.recyclerview.widget.RecyclerView
+                  android:id="@+id/recviewSpecial"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
@@ -208,6 +216,7 @@
 
                 <ProgressBar
                     android:layout_width="wrap_content"
+                   android:visibility="gone"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center" />
 

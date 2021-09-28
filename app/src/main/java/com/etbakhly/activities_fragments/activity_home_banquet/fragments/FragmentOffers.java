@@ -17,6 +17,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.etbakhly.R;
 import com.etbakhly.activities_fragments.activity_home_banquet.HomeActivity;
 
+import com.etbakhly.adapters.MostFamousChefAdapter;
+import com.etbakhly.adapters.OfferAdapter;
 import com.etbakhly.databinding.FragmnetOfferBanquetBinding;
 import com.etbakhly.models.UserModel;
 import com.etbakhly.preferences.Preferences;
@@ -38,7 +40,7 @@ public class FragmentOffers extends Fragment {
     private Preferences preferences;
     private UserModel userModel;
     private String lang;
-
+    private List<Object> list;
 
     public static FragmentOffers newInstance() {
 
@@ -60,17 +62,17 @@ public class FragmentOffers extends Fragment {
     }
 
     private void initView() {
-
+        list = new ArrayList<>();
         activity = (HomeActivity) getActivity();
         preferences = Preferences.getInstance();
         userModel = preferences.getUserData(activity);
         Paper.init(activity);
         lang = Paper.book().read("lang", "ar");
-
+        binding.recviewoffer.setLayoutManager(new LinearLayoutManager(activity));
+        binding.recviewoffer.setAdapter(new OfferAdapter(list, activity));
 
 
     }
-
 
 
 }
