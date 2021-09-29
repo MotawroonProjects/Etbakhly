@@ -1,4 +1,4 @@
-package com.etbakhly.activities_fragments.activity_home_banquet.fragments;
+package com.etbakhly.activities_fragments.activity_home_independent.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,14 +13,14 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.etbakhly.R;
-import com.etbakhly.activities_fragments.activity_home_banquet.HomeActivity;
+import com.etbakhly.activities_fragments.activity_home_independent.HomeActivity;
 
 import com.etbakhly.adapters.CategoryAdapter;
 import com.etbakhly.adapters.MostFamousChefAdapter;
 import com.etbakhly.adapters.NearProductAdapter;
 import com.etbakhly.adapters.SliderAdapter;
 import com.etbakhly.adapters.SpecialDishesProductAdapter;
-import com.etbakhly.databinding.FragmnetMainBanquetBinding;
+import com.etbakhly.databinding.FragmnetMainIndependentBinding;
 import com.etbakhly.models.UserModel;
 import com.etbakhly.preferences.Preferences;
 
@@ -34,7 +34,7 @@ import io.paperdb.Paper;
 public class Fragment_Home extends Fragment {
 
     private HomeActivity activity;
-    private FragmnetMainBanquetBinding binding;
+    private FragmnetMainIndependentBinding binding;
     private Preferences preferences;
     private String lang;
     private UserModel userModel;
@@ -54,7 +54,7 @@ public class Fragment_Home extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragmnet_main_banquet, container, false);
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragmnet_main_independent, container, false);
         initView();
 
         return binding.getRoot();

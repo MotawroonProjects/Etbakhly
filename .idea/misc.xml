@@ -18,6 +18,8 @@
         <entry key="..\:/Users/EL MOTWRON/Desktop/Etbakhly/app/src/main/res/drawable/rounded_empty_stroke.xml" value="0.2890625" />
         <entry key="..\:/Users/EL MOTWRON/Desktop/Etbakhly/app/src/main/res/drawable/rounded_primary.xml" value="0.2890625" />
         <entry key="..\:/Users/EL MOTWRON/Desktop/Etbakhly/app/src/main/res/drawable/rounded_white.xml" value="0.2890625" />
+        <entry key="..\:/Users/EL MOTWRON/Desktop/Etbakhly/app/src/main/res/drawable/small_stroke_primary.xml" value="0.2890625" />
+        <entry key="..\:/Users/EL MOTWRON/Desktop/Etbakhly/app/src/main/res/drawable/tab_indicator.xml" value="0.2890625" />
         <entry key="..\:/Users/EL MOTWRON/Desktop/Etbakhly/app/src/main/res/layout/activity_choose.xml" value="0.33" />
         <entry key="..\:/Users/EL MOTWRON/Desktop/Etbakhly/app/src/main/res/layout/activity_home_banquet.xml" value="0.17592592592592593" />
         <entry key="..\:/Users/EL MOTWRON/Desktop/Etbakhly/app/src/main/res/layout/activity_intro_slider.xml" value="0.17592592592592593" />
@@ -26,15 +28,19 @@
         <entry key="..\:/Users/EL MOTWRON/Desktop/Etbakhly/app/src/main/res/layout/activity_splash.xml" value="0.20555555555555555" />
         <entry key="..\:/Users/EL MOTWRON/Desktop/Etbakhly/app/src/main/res/layout/cart_banquet_row.xml" value="0.16018518518518518" />
         <entry key="..\:/Users/EL MOTWRON/Desktop/Etbakhly/app/src/main/res/layout/category_row.xml" value="0.14270833333333333" />
+        <entry key="..\:/Users/EL MOTWRON/Desktop/Etbakhly/app/src/main/res/layout/fragment_orders.xml" value="0.12777777777777777" />
         <entry key="..\:/Users/EL MOTWRON/Desktop/Etbakhly/app/src/main/res/layout/fragmnet_cart_banquet.xml" value="0.25" />
+        <entry key="..\:/Users/EL MOTWRON/Desktop/Etbakhly/app/src/main/res/layout/fragmnet_cart_independent.xml" value="0.12777777777777777" />
         <entry key="..\:/Users/EL MOTWRON/Desktop/Etbakhly/app/src/main/res/layout/fragmnet_main_banquet.xml" value="0.17592592592592593" />
         <entry key="..\:/Users/EL MOTWRON/Desktop/Etbakhly/app/src/main/res/layout/fragmnet_myorders.xml" value="0.17592592592592593" />
+        <entry key="..\:/Users/EL MOTWRON/Desktop/Etbakhly/app/src/main/res/layout/fragmnet_myorders_banquet.xml" value="0.25" />
         <entry key="..\:/Users/EL MOTWRON/Desktop/Etbakhly/app/src/main/res/layout/fragmnet_offer_banquet.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/EL MOTWRON/Desktop/Etbakhly/app/src/main/res/layout/fragmnet_profile.xml" value="0.17592592592592593" />
         <entry key="..\:/Users/EL MOTWRON/Desktop/Etbakhly/app/src/main/res/layout/intro_row.xml" value="0.17592592592592593" />
         <entry key="..\:/Users/EL MOTWRON/Desktop/Etbakhly/app/src/main/res/layout/most_famous_chef_row.xml" value="0.25" />
         <entry key="..\:/Users/EL MOTWRON/Desktop/Etbakhly/app/src/main/res/layout/near_product_row.xml" value="0.16018518518518518" />
         <entry key="..\:/Users/EL MOTWRON/Desktop/Etbakhly/app/src/main/res/layout/offer_product_row.xml" value="0.25" />
+        <entry key="..\:/Users/EL MOTWRON/Desktop/Etbakhly/app/src/main/res/layout/order_row.xml" value="0.25" />
         <entry key="..\:/Users/EL MOTWRON/Desktop/Etbakhly/app/src/main/res/layout/product_row.xml" value="0.5" />
         <entry key="..\:/Users/EL MOTWRON/Desktop/Etbakhly/app/src/main/res/layout/slider_row.xml" value="0.14270833333333333" />
         <entry key="..\:/Users/EL MOTWRON/Desktop/Etbakhly/app/src/main/res/layout/special_dishes_product_row.xml" value="0.16018518518518518" />

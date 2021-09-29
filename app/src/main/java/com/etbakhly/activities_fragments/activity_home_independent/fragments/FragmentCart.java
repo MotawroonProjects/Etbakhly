@@ -1,4 +1,4 @@
-package com.etbakhly.activities_fragments.activity_home_banquet.fragments;
+package com.etbakhly.activities_fragments.activity_home_independent.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,15 +11,17 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.etbakhly.R;
-import com.etbakhly.activities_fragments.activity_home_banquet.HomeActivity;
+import com.etbakhly.activities_fragments.activity_home_independent.HomeActivity;
 
-import com.etbakhly.adapters.MostFamousChefAdapter;
-import com.etbakhly.adapters.OfferAdapter;
-import com.etbakhly.databinding.FragmnetOfferBanquetBinding;
+
+import com.etbakhly.adapters.CartIndependentAdapter;
+import com.etbakhly.databinding.FragmnetCartIndependentBinding;
+import com.etbakhly.models.UserDataModel;
 import com.etbakhly.models.UserModel;
 import com.etbakhly.preferences.Preferences;
 import com.etbakhly.remote.Api;
@@ -33,33 +35,27 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class FragmentOffers extends Fragment {
+public class FragmentCart extends Fragment {
 
     private HomeActivity activity;
-    private FragmnetOfferBanquetBinding binding;
+    private FragmnetCartIndependentBinding binding;
     private Preferences preferences;
     private UserModel userModel;
     private String lang;
     private List<Object> list;
 
-    public static FragmentOffers newInstance() {
-
-        return new FragmentOffers();
+    public static FragmentCart newInstance() {
+        return new FragmentCart();
     }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragmnet_offer_banquet, container, false);
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragmnet_cart_independent, container, false);
+        initView();
         return binding.getRoot();
     }
 
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        initView();
-
-    }
 
     private void initView() {
         list = new ArrayList<>();
@@ -68,10 +64,8 @@ public class FragmentOffers extends Fragment {
         userModel = preferences.getUserData(activity);
         Paper.init(activity);
         lang = Paper.book().read("lang", "ar");
-        binding.recviewoffer.setLayoutManager(new LinearLayoutManager(activity));
-        binding.recviewoffer.setAdapter(new OfferAdapter(list, activity));
-
-
+        binding.recviewCart.setLayoutManager(new LinearLayoutManager(activity));
+        binding.recviewCart.setAdapter(new CartIndependentAdapter(list, activity));
     }
 
 

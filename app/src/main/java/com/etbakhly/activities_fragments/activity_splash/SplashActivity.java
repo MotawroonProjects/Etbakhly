@@ -11,9 +11,8 @@ import androidx.databinding.DataBindingUtil;
 import com.etbakhly.R;
 
 import com.etbakhly.activities_fragments.activity_choose.ChooseActivity;
-import com.etbakhly.activities_fragments.activity_home_banquet.HomeActivity;
+import com.etbakhly.activities_fragments.activity_home_independent.HomeActivity;
 import com.etbakhly.activities_fragments.activity_intro_slider.IntroSliderActivity;
-import com.etbakhly.activities_fragments.activity_login.LoginActivity;
 import com.etbakhly.databinding.ActivitySplashBinding;
 import com.etbakhly.language.Language;
 import com.etbakhly.models.UserModel;

@@ -37,4 +37,9 @@
     <string name="categories">Categories</string>
     <string name="near_to_you">Near To You</string>
     <string name="special_dishes">Special Dishes</string>
+    <string name="current_orders">Current Orders</string>
+    <string name="previous_orders">Previous Orders</string>
+    <string name="order_num">Order Num :</string>
+    <string name="return_order">Return Order</string>
+    <string name="rate">Rate</string>
 </resources>

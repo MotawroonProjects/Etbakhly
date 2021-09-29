@@ -3,7 +3,6 @@ package com.etbakhly.activities_fragments.activity_choose;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
 
 import androidx.activity.result.ActivityResultLauncher;
@@ -13,11 +12,9 @@ import androidx.databinding.DataBindingUtil;
 
 import com.etbakhly.R;
 
-import com.etbakhly.activities_fragments.activity_home_banquet.HomeActivity;
-import com.etbakhly.activities_fragments.activity_login.LoginActivity;
+import com.etbakhly.activities_fragments.activity_home_independent.HomeActivity;
 import com.etbakhly.activities_fragments.activity_map.MapActivity;
 import com.etbakhly.databinding.ActivityChooseBinding;
-import com.etbakhly.databinding.ActivitySplashBinding;
 import com.etbakhly.language.Language;
 import com.etbakhly.models.SelectedLocation;
 import com.etbakhly.models.UserModel;
@@ -57,7 +54,7 @@ public class ChooseActivity extends AppCompatActivity {
             }
         });
 
-        binding.flBanquet.setOnClickListener(new View.OnClickListener() {
+        binding.flIndependent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ChooseActivity.this, MapActivity.class);

@@ -1,4 +1,4 @@
-package com.etbakhly.activities_fragments.activity_home_banquet;
+package com.etbakhly.activities_fragments.activity_home_independent;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -21,13 +21,13 @@ import com.aurelhubert.ahbottomnavigation.AHBottomNavigation;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem;
 import com.etbakhly.R;
 
-import com.etbakhly.activities_fragments.activity_home_banquet.fragments.FragmentCart;
-import com.etbakhly.activities_fragments.activity_home_banquet.fragments.FragmentMyOrders;
-import com.etbakhly.activities_fragments.activity_home_banquet.fragments.FragmentOffers;
-import com.etbakhly.activities_fragments.activity_home_banquet.fragments.Fragment_Home;
-import com.etbakhly.activities_fragments.activity_home_banquet.fragments.Fragment_Profile;
+import com.etbakhly.activities_fragments.activity_home_independent.fragments.FragmentCart;
+import com.etbakhly.activities_fragments.activity_home_independent.fragments.FragmentMyOrders;
+import com.etbakhly.activities_fragments.activity_home_independent.fragments.FragmentOffers;
+import com.etbakhly.activities_fragments.activity_home_independent.fragments.Fragment_Home;
+import com.etbakhly.activities_fragments.activity_home_independent.fragments.Fragment_Profile;
 import com.etbakhly.activities_fragments.activity_login.LoginActivity;
-import com.etbakhly.databinding.ActivityHomeBanquetBinding;
+import com.etbakhly.databinding.ActivityHomeIndependentBinding;
 import com.etbakhly.language.Language;
 import com.etbakhly.models.UserModel;
 import com.etbakhly.preferences.Preferences;
@@ -47,7 +47,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class HomeActivity extends AppCompatActivity {
-    private ActivityHomeBanquetBinding binding;
+    private ActivityHomeIndependentBinding binding;
     private Preferences preferences;
     private FragmentManager fragmentManager;
     private Fragment_Home fragment_home;
@@ -71,7 +71,7 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_home_banquet);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_home_independent);
         initView();
 
 
