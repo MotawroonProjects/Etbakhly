@@ -1,13 +1,9 @@
-package com.etbakhly.activities_fragments.activity_home_independent;
+package com.etbakhly.activities_fragments.banquete.activity_home_banquete;
 
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.util.Log;
-import android.view.MenuItem;
-import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,33 +16,25 @@ import androidx.fragment.app.FragmentManager;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigation;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem;
 import com.etbakhly.R;
-
-import com.etbakhly.activities_fragments.activity_home_independent.fragments.FragmentCart;
-import com.etbakhly.activities_fragments.activity_home_independent.fragments.FragmentMyOrders;
-import com.etbakhly.activities_fragments.activity_home_independent.fragments.FragmentOffers;
-import com.etbakhly.activities_fragments.activity_home_independent.fragments.Fragment_Home;
-import com.etbakhly.activities_fragments.activity_home_independent.fragments.Fragment_Profile;
 import com.etbakhly.activities_fragments.activity_login.LoginActivity;
+import com.etbakhly.activities_fragments.banquete.activity_home_banquete.fragments.FragmentCart;
+import com.etbakhly.activities_fragments.banquete.activity_home_banquete.fragments.FragmentMyOrders;
+import com.etbakhly.activities_fragments.banquete.activity_home_banquete.fragments.FragmentOffers;
+import com.etbakhly.activities_fragments.banquete.activity_home_banquete.fragments.Fragment_Home;
+import com.etbakhly.activities_fragments.banquete.activity_home_banquete.fragments.Fragment_Profile;
+import com.etbakhly.activities_fragments.independent.activity_chief_indepndent.IndependentChiefActivity;
 import com.etbakhly.databinding.ActivityHomeIndependentBinding;
 import com.etbakhly.language.Language;
 import com.etbakhly.models.UserModel;
 import com.etbakhly.preferences.Preferences;
-import com.etbakhly.remote.Api;
-import com.etbakhly.share.Common;
-import com.etbakhly.tags.Tags;
-import com.google.firebase.iid.FirebaseInstanceId;
 
 import org.greenrobot.eventbus.EventBus;
 
-import java.io.IOException;
 import java.util.List;
 
 import io.paperdb.Paper;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
-public class HomeActivity extends AppCompatActivity {
+public class HomeBanqueteActivity extends AppCompatActivity {
     private ActivityHomeIndependentBinding binding;
     private Preferences preferences;
     private FragmentManager fragmentManager;
@@ -461,4 +449,8 @@ public class HomeActivity extends AppCompatActivity {
         finish();
     }
 
+    public void show() {
+        Intent intent = new Intent(this, IndependentChiefActivity.class);
+        startActivity(intent);
+    }
 }

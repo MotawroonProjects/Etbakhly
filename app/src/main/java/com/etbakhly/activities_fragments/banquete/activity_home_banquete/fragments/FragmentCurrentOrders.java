@@ -1,4 +1,4 @@
-package com.etbakhly.activities_fragments.activity_home_independent.fragments;
+package com.etbakhly.activities_fragments.banquete.activity_home_banquete.fragments;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -13,9 +13,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.etbakhly.R;
-
-import com.etbakhly.activities_fragments.activity_home_independent.HomeActivity;
-import com.etbakhly.adapters.OfferAdapter;
+import com.etbakhly.activities_fragments.banquete.activity_home_banquete.HomeBanqueteActivity;
 import com.etbakhly.adapters.OrdersAdapter;
 import com.etbakhly.databinding.FragmentOrdersBinding;
 import com.etbakhly.models.UserModel;
@@ -28,7 +26,7 @@ import io.paperdb.Paper;
 
 public class FragmentCurrentOrders extends Fragment {
 
-    private HomeActivity activity;
+    private HomeBanqueteActivity activity;
     private FragmentOrdersBinding binding;
     private Preferences preferences;
     private String lang;
@@ -52,7 +50,7 @@ private List<Object> list;
 
     private void initView() {
         list=new ArrayList<>();
-        activity = (HomeActivity) getActivity();
+        activity = (HomeBanqueteActivity) getActivity();
         preferences = Preferences.getInstance();
         userModel = preferences.getUserData(activity);
         Paper.init(activity);

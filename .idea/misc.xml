@@ -22,6 +22,7 @@
         <entry key="..\:/Users/EL MOTWRON/Desktop/Etbakhly/app/src/main/res/drawable/tab_indicator.xml" value="0.2890625" />
         <entry key="..\:/Users/EL MOTWRON/Desktop/Etbakhly/app/src/main/res/layout/activity_choose.xml" value="0.33" />
         <entry key="..\:/Users/EL MOTWRON/Desktop/Etbakhly/app/src/main/res/layout/activity_home_banquet.xml" value="0.17592592592592593" />
+        <entry key="..\:/Users/EL MOTWRON/Desktop/Etbakhly/app/src/main/res/layout/activity_independent_chef.xml" value="0.33" />
         <entry key="..\:/Users/EL MOTWRON/Desktop/Etbakhly/app/src/main/res/layout/activity_intro_slider.xml" value="0.17592592592592593" />
         <entry key="..\:/Users/EL MOTWRON/Desktop/Etbakhly/app/src/main/res/layout/activity_login.xml" value="0.20555555555555555" />
         <entry key="..\:/Users/EL MOTWRON/Desktop/Etbakhly/app/src/main/res/layout/activity_map.xml" value="0.17592592592592593" />
@@ -45,6 +46,28 @@
         <entry key="..\:/Users/EL MOTWRON/Desktop/Etbakhly/app/src/main/res/layout/slider_row.xml" value="0.14270833333333333" />
         <entry key="..\:/Users/EL MOTWRON/Desktop/Etbakhly/app/src/main/res/layout/special_dishes_product_row.xml" value="0.16018518518518518" />
         <entry key="..\:/Users/EL MOTWRON/Desktop/Etbakhly/app/src/main/res/layout/ss.xml" value="0.20555555555555555" />
+        <entry key="..\:/Users/HP/Desktop/Etbakhly/app/src/main/res/layout/activity_choose.xml" value="0.33" />
+        <entry key="..\:/Users/HP/Desktop/Etbakhly/app/src/main/res/layout/activity_independent_chef.xml" value="0.33" />
+        <entry key="..\:/Users/HP/Desktop/Etbakhly/app/src/main/res/layout/activity_independent_chef_detials.xml" value="0.22291666666666668" />
+        <entry key="..\:/Users/HP/Desktop/Etbakhly/app/src/main/res/layout/activity_login.xml" value="0.1390625" />
+        <entry key="..\:/Users/HP/Desktop/Etbakhly/app/src/main/res/layout/categories_row.xml" value="0.33" />
+        <entry key="..\:/Users/HP/Desktop/Etbakhly/app/src/main/res/layout/category_row.xml" value="0.25" />
+        <entry key="..\:/Users/HP/Desktop/Etbakhly/app/src/main/res/layout/chif_user_independent_row.xml" value="0.33" />
+        <entry key="..\:/Users/HP/Desktop/Etbakhly/app/src/main/res/layout/chif_user_row.xml" value="0.22509057971014493" />
+        <entry key="..\:/Users/HP/Desktop/Etbakhly/app/src/main/res/layout/fragment_orders.xml" value="0.12552083333333333" />
+        <entry key="..\:/Users/HP/Desktop/Etbakhly/app/src/main/res/layout/fragmnet_cart_independent.xml" value="0.21" />
+        <entry key="..\:/Users/HP/Desktop/Etbakhly/app/src/main/res/layout/fragmnet_main_banquete.xml" value="0.17" />
+        <entry key="..\:/Users/HP/Desktop/Etbakhly/app/src/main/res/layout/fragmnet_main_independent.xml" value="0.12552083333333333" />
+        <entry key="..\:/Users/HP/Desktop/Etbakhly/app/src/main/res/layout/fragmnet_menu_independent.xml" value="0.33" />
+        <entry key="..\:/Users/HP/Desktop/Etbakhly/app/src/main/res/layout/fragmnet_myorders_independent.xml" value="0.12552083333333333" />
+        <entry key="..\:/Users/HP/Desktop/Etbakhly/app/src/main/res/layout/most_famous_chef_row.xml" value="0.22509057971014493" />
+        <entry key="..\:/Users/HP/Desktop/Etbakhly/app/src/main/res/layout/near_product_row.xml" value="0.22509057971014493" />
+        <entry key="..\:/Users/HP/Desktop/Etbakhly/app/src/main/res/layout/offer_image_row.xml" value="0.14270833333333333" />
+        <entry key="..\:/Users/HP/Desktop/Etbakhly/app/src/main/res/layout/offer_product_row.xml" value="0.22509057971014493" />
+        <entry key="..\:/Users/HP/Desktop/Etbakhly/app/src/main/res/layout/order_row.xml" value="0.12864583333333332" />
+        <entry key="..\:/Users/HP/Desktop/Etbakhly/app/src/main/res/layout/product_independent_row.xml" value="0.25" />
+        <entry key="..\:/Users/HP/Desktop/Etbakhly/app/src/main/res/layout/rate_row.xml" value="0.25" />
+        <entry key="..\:/Users/HP/Desktop/Etbakhly/app/src/main/res/layout/special_dishes_product_row.xml" value="0.22509057971014493" />
       </map>
     </option>
   </component>

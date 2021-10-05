@@ -1,4 +1,4 @@
-package com.etbakhly.activities_fragments.activity_home_independent.fragments;
+package com.etbakhly.activities_fragments.independent.activity_home_independent.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.etbakhly.R;
-import com.etbakhly.activities_fragments.activity_home_independent.HomeActivity;
+import com.etbakhly.activities_fragments.independent.activity_home_independent.HomeActivity;
 
 import com.etbakhly.adapters.CategoryAdapter;
 import com.etbakhly.adapters.MostFamousChefAdapter;

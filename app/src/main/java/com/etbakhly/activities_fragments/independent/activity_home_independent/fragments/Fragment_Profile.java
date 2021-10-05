@@ -1,4 +1,4 @@
-package com.etbakhly.activities_fragments.activity_home_independent.fragments;
+package com.etbakhly.activities_fragments.independent.activity_home_independent.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,7 +12,7 @@ import androidx.fragment.app.Fragment;
 
 import com.etbakhly.R;
 
-import com.etbakhly.activities_fragments.activity_home_independent.HomeActivity;
+import com.etbakhly.activities_fragments.independent.activity_home_independent.HomeActivity;
 
 import com.etbakhly.databinding.FragmnetProfileIndependentBinding;
 import com.etbakhly.models.UserModel;

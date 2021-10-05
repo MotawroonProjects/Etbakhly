@@ -33,7 +33,7 @@ android:layout_gravity="center"
                 android:layout_height="wrap_content"
 
                 android:layout_gravity="center"
-                android:text="محمد السعدي"
+                android:text="مطابخ شامى"
                 android:textColor="@color/gray25"
                 android:textSize="14sp" />
 

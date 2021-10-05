@@ -12,8 +12,9 @@ import androidx.databinding.DataBindingUtil;
 
 import com.etbakhly.R;
 
-import com.etbakhly.activities_fragments.activity_home_independent.HomeActivity;
-import com.etbakhly.activities_fragments.activity_map.MapActivity;
+import com.etbakhly.activities_fragments.banquete.activity_home_banquete.HomeBanqueteActivity;
+import com.etbakhly.activities_fragments.independent.activity_home_independent.HomeActivity;
+import com.etbakhly.activities_fragments.independent.activity_map.MapActivity;
 import com.etbakhly.databinding.ActivityChooseBinding;
 import com.etbakhly.language.Language;
 import com.etbakhly.models.SelectedLocation;
@@ -42,18 +43,14 @@ public class ChooseActivity extends AppCompatActivity {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_choose);
         preferences = Preferences.getInstance();
         userModel = preferences.getUserData(this);
-        launcher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
-            if (result.getResultCode() == RESULT_OK && result.getData() != null) {
 
-
-                selectedLocation = (SelectedLocation) result.getData().getSerializableExtra("location");
-
-                Intent intent = new Intent(this, HomeActivity.class);
-                startActivity(intent);
-
+        binding.flBanquet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ChooseActivity.this, HomeBanqueteActivity.class);
+                launcher.launch(intent);
             }
         });
-
         binding.flIndependent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

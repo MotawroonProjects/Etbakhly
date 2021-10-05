@@ -1,4 +1,4 @@
-package com.etbakhly.activities_fragments.activity_map;
+package com.etbakhly.activities_fragments.independent.activity_map;
 
 import android.Manifest;
 import android.annotation.SuppressLint;

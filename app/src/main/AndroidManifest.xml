@@ -35,7 +35,19 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities_fragments.activity_map.MapActivity"
+            android:name=".activities_fragments.banquete.activity_home_banquete.HomeBanqueteActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".activities_fragments.independent.activity_chief_indepndent_detialsActivity.IndependentChiefDetialsActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".activities_fragments.independent.activity_chief_indepndent.IndependentChiefActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".activities_fragments.independent.activity_map.MapActivity"
             android:configChanges="keyboardHidden|screenSize|orientation"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
         <activity
@@ -48,7 +60,7 @@
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
 
         <activity
-            android:name=".activities_fragments.activity_home_independent.HomeActivity"
+            android:name=".activities_fragments.independent.activity_home_independent.HomeActivity"
             android:configChanges="keyboardHidden|screenSize|orientation"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
 

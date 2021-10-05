@@ -42,4 +42,27 @@
     <string name="order_num">Order Num :</string>
     <string name="return_order">Return Order</string>
     <string name="rate">Rate</string>
+    <string name="filter">Filter</string>
+    <string name="sort_by">Sort By</string>
+    <string name="the_most_wanted">The Most Wanted</string>
+    <string name="main_dishes">Main Dishes</string>
+    <string name="menu">Menu</string>
+    <string name="r_s">R.S</string>
+    <string name="confirm_order">Confirm Order</string>
+    <string name="recommendations">Recommendations</string>
+    <string name="high_rate">High Rate</string>
+    <string name="near">Near</string>
+    <string name="done">Done</string>
+=    <string name="rate2">Rate</string>
+    <string name="delivery_method">Delivery method</string>
+    <string name="delivery">Delivery</string>
+    <string name="did_not_matter">Did not matter</string>
+    <string name="delivery_time">Delivery time</string>
+    <string name="delivery_from_8_am_to_4_pm">Delivery from 8 am to 4 pm</string>
+    <string name="delivery_from_4_pm_to_10_pm">Delivery from 4 pm to 10 pm</string>
+    <string name="delivery_from_10_pm_to_8_am">Delivery from 10 pm to 8 am</string>
+    <string name="apply_on">Apply On</string>
+    <string name="most_famous_in_your_area">Most Famous In Your Area</string>
+    <string name="special_kitchen">Special Kitchen</string>
+    <string name="kitchens_provide_free_delivery">Kitchens provide free delivery</string>
 </resources>
