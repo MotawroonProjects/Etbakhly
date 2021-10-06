@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.etbakhly.R;
 import com.etbakhly.activities_fragments.banquete.activity_home_banquete.HomeBanqueteActivity;
 import com.etbakhly.adapters.CategoryAdapter;
+import com.etbakhly.adapters.KitchenBanqueteAdapter;
 import com.etbakhly.adapters.NearProductAdapter;
 import com.etbakhly.adapters.SliderAdapter;
 import com.etbakhly.adapters.SpecialDishesProductAdapter;
@@ -76,9 +77,11 @@ public class Fragment_Home extends Fragment {
         binding.recviewCategory.setLayoutManager(new LinearLayoutManager(activity, RecyclerView.HORIZONTAL, false));
         binding.recviewCategory.setAdapter(new CategoryAdapter(list, activity));
         binding.recviewnear.setLayoutManager(new LinearLayoutManager(activity, RecyclerView.HORIZONTAL, false));
-        binding.recviewnear.setAdapter(new NearProductAdapter(list, activity));
+        binding.recviewnear.setAdapter(new KitchenBanqueteAdapter(list, activity));
         binding.recviewSpecial.setLayoutManager(new LinearLayoutManager(activity, RecyclerView.HORIZONTAL, false));
-        binding.recviewSpecial.setAdapter(new SpecialDishesProductAdapter(list, activity));
+        binding.recviewSpecial.setAdapter(new KitchenBanqueteAdapter(list, activity));
+        binding.recviewdelivry.setLayoutManager(new LinearLayoutManager(activity, RecyclerView.HORIZONTAL, false));
+        binding.recviewdelivry.setAdapter(new KitchenBanqueteAdapter(list, activity));
         updateSliderUi();
 
 

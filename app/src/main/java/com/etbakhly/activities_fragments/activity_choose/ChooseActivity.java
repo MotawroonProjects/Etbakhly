@@ -43,12 +43,29 @@ public class ChooseActivity extends AppCompatActivity {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_choose);
         preferences = Preferences.getInstance();
         userModel = preferences.getUserData(this);
+        launcher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
+            if (result.getResultCode() == RESULT_OK && result.getData() != null) {
 
+
+                selectedLocation = (SelectedLocation) result.getData().getSerializableExtra("location");
+
+                Intent intent = new Intent(this, HomeActivity.class);
+                startActivity(intent);
+
+            }
+        });
         binding.flBanquet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ChooseActivity.this, HomeBanqueteActivity.class);
-                launcher.launch(intent);
+                startActivity(intent);
+            }
+        });
+        binding.flfoodcar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ChooseActivity.this, HomeBanqueteActivity.class);
+                startActivity(intent);
             }
         });
         binding.flIndependent.setOnClickListener(new View.OnClickListener() {

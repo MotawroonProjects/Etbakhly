@@ -65,4 +65,15 @@
     <string name="most_famous_in_your_area">Most Famous In Your Area</string>
     <string name="special_kitchen">Special Kitchen</string>
     <string name="kitchens_provide_free_delivery">Kitchens provide free delivery</string>
+    <string name="galarys">Galary</string>
+    <string name="services">Services</string>
+    <string name="buffet_reservation_service">Buffet Reservation Service</string>
+    <string name="we_offer_buffets_for_all_private_and_public_occasions">We offer buffets for all private and public occasions</string>
+    <string name="banquet_booking_service">Banquet Booking Service</string>
+    <string name="processing_time">processing Time</string>
+    <string name="service_delivery">Service Delivery</string>
+    <string name="buffet_list">Buffet List</string>
+    <string name="pepople_num">Pepople Num : </string>
+    <string name="food_menu">Food Menu</string>
+    <string name="amount">Amount :</string>
 </resources>

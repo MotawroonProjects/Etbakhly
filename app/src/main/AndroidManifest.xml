@@ -25,6 +25,22 @@
         android:requestLegacyExternalStorage="true"
         tools:targetApi="m">
         <activity
+            android:name=".activities_fragments.banquete.activity_banquete_book.BanqueteBookActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".activities_fragments.banquete.activity_buffet_detials.BuffetDetialsActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".activities_fragments.banquete.activity_buffet_banquete.BuffetActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".activities_fragments.banquete.activity_banquete_kitchen_detialsActivity.BanqueteKitchenDetialsActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
             android:name=".activities_fragments.activity_splash.SplashActivity"
             android:configChanges="keyboardHidden|screenSize|orientation"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize">

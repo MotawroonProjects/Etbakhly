@@ -17,6 +17,7 @@ import com.aurelhubert.ahbottomnavigation.AHBottomNavigation;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem;
 import com.etbakhly.R;
 import com.etbakhly.activities_fragments.activity_login.LoginActivity;
+import com.etbakhly.activities_fragments.banquete.activity_banquete_kitchen_detialsActivity.BanqueteKitchenDetialsActivity;
 import com.etbakhly.activities_fragments.banquete.activity_home_banquete.fragments.FragmentCart;
 import com.etbakhly.activities_fragments.banquete.activity_home_banquete.fragments.FragmentMyOrders;
 import com.etbakhly.activities_fragments.banquete.activity_home_banquete.fragments.FragmentOffers;
@@ -450,7 +451,7 @@ public class HomeBanqueteActivity extends AppCompatActivity {
     }
 
     public void show() {
-        Intent intent = new Intent(this, IndependentChiefActivity.class);
+        Intent intent = new Intent(this, BanqueteKitchenDetialsActivity.class);
         startActivity(intent);
     }
 }
