@@ -1,4 +1,4 @@
-package com.etbakhly.activities_fragments.independent.activity_chief_indepndent;
+package com.etbakhly.activities_fragments.food_truck.activity_food_truck;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.etbakhly.R;
+import com.etbakhly.activities_fragments.food_truck.activity_food_truck_detialsActivity.FoodTruckDetialsActivity;
 import com.etbakhly.activities_fragments.independent.activity_chief_indepndent_detialsActivity.IndependentChiefDetialsActivity;
 import com.etbakhly.adapters.CategoriesAdapter;
 import com.etbakhly.adapters.IndependentChiefAdapter;
@@ -26,7 +27,7 @@ import java.util.List;
 
 import io.paperdb.Paper;
 
-public class IndependentChiefActivity extends AppCompatActivity {
+public class FoodTruckActivity extends AppCompatActivity {
 
     private ActivityIndependentChefBinding binding;
     private Preferences preferences;
@@ -93,7 +94,7 @@ public class IndependentChiefActivity extends AppCompatActivity {
     }
 
     public void show() {
-        Intent intent = new Intent(this, IndependentChiefDetialsActivity.class);
+        Intent intent = new Intent(this, FoodTruckDetialsActivity.class);
         startActivity(intent);
     }
 

@@ -11,6 +11,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.etbakhly.R;
+import com.etbakhly.activities_fragments.food_truck.activity_food_truck.FoodTruckActivity;
 import com.etbakhly.activities_fragments.independent.activity_chief_indepndent.IndependentChiefActivity;
 import com.etbakhly.databinding.ChifUserIndependentRowBinding;
 
@@ -53,6 +54,10 @@ public class IndependentChiefAdapter extends RecyclerView.Adapter<RecyclerView.V
             public void onClick(View view) {
                 if(context instanceof IndependentChiefActivity){
                     IndependentChiefActivity activity=(IndependentChiefActivity) context;
+                    activity.show();
+                }
+                else if(context instanceof FoodTruckActivity){
+                    FoodTruckActivity activity=(FoodTruckActivity) context;
                     activity.show();
                 }
             }

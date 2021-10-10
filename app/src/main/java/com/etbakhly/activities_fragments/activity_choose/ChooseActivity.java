@@ -13,6 +13,7 @@ import androidx.databinding.DataBindingUtil;
 import com.etbakhly.R;
 
 import com.etbakhly.activities_fragments.banquete.activity_home_banquete.HomeBanqueteActivity;
+import com.etbakhly.activities_fragments.food_truck.activity_map_food_truck.MapFoodTruckActivity;
 import com.etbakhly.activities_fragments.independent.activity_home_independent.HomeActivity;
 import com.etbakhly.activities_fragments.independent.activity_map.MapActivity;
 import com.etbakhly.databinding.ActivityChooseBinding;
@@ -64,7 +65,7 @@ public class ChooseActivity extends AppCompatActivity {
         binding.flfoodcar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ChooseActivity.this, HomeBanqueteActivity.class);
+                Intent intent = new Intent(ChooseActivity.this, MapFoodTruckActivity.class);
                 startActivity(intent);
             }
         });

@@ -76,4 +76,10 @@
     <string name="pepople_num">Pepople Num : </string>
     <string name="food_menu">Food Menu</string>
     <string name="amount">Amount :</string>
+    <string name="most_famous_car">Most Famous Car</string>
+    <string name="near_car">Near Car</string>
+    <string name="setup_requirements">Setup Requirements</string>
+    <string name="package_is_ready">Package is ready</string>
+    <string name="choose_dishes">Choose Dishes</string>
+    <string name="we_offer_you_a_food_cart_for_all_private_and_public_occasions">We offer you a food cart for all private and public occasions</string>
 </resources>

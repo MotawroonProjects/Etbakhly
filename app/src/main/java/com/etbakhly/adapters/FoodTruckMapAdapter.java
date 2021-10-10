@@ -10,14 +10,12 @@ import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.etbakhly.R;
-import com.etbakhly.activities_fragments.banquete.activity_home_banquete.HomeBanqueteActivity;
-import com.etbakhly.activities_fragments.food_truck.activity_home_food_truck.HomeFoodTruckActivity;
-import com.etbakhly.databinding.CategoryRowBinding;
-import com.etbakhly.databinding.MostFamousChefRowBinding;
+import com.etbakhly.activities_fragments.food_truck.activity_map_food_truck.MapFoodTruckActivity;
+import com.etbakhly.databinding.FoodTruckMapRowBinding;
 
 import java.util.List;
 
-public class CategoryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public class FoodTruckMapAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private List<Object> list;
     private Context context;
@@ -25,7 +23,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
 
 
 
-    public CategoryAdapter(List<Object> list, Context context) {
+    public FoodTruckMapAdapter(List<Object> list, Context context) {
         this.list = list;
         this.context = context;
         inflater = LayoutInflater.from(context);
@@ -37,7 +35,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
 
-        CategoryRowBinding binding = DataBindingUtil.inflate(inflater, R.layout.category_row, parent, false);
+        FoodTruckMapRowBinding binding = DataBindingUtil.inflate(inflater, R.layout.food_truck_map_row, parent, false);
         return new MyHolder(binding);
 
 
@@ -47,16 +45,16 @@ public class CategoryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
 
         MyHolder myHolder = (MyHolder) holder;
+myHolder.itemView.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        if(context instanceof MapFoodTruckActivity){
+            MapFoodTruckActivity activity=(MapFoodTruckActivity) context;
+            activity.show();
+        }
+    }
+});
 
-        myHolder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(context instanceof HomeFoodTruckActivity){
-                    HomeFoodTruckActivity activity=(HomeFoodTruckActivity) context;
-                    activity.show();
-                }
-            }
-        });
 
 
     }
@@ -67,9 +65,9 @@ public class CategoryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
     }
 
     public static class MyHolder extends RecyclerView.ViewHolder {
-        public CategoryRowBinding binding;
+        public FoodTruckMapRowBinding binding;
 
-        public MyHolder(@NonNull CategoryRowBinding binding) {
+        public MyHolder(@NonNull FoodTruckMapRowBinding binding) {
             super(binding.getRoot());
             this.binding = binding;
 

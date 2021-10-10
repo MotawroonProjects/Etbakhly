@@ -25,6 +25,22 @@
         android:requestLegacyExternalStorage="true"
         tools:targetApi="m">
         <activity
+            android:name=".activities_fragments.food_truck.activity_food_truck_detialsActivity.FoodTruckDetialsActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".activities_fragments.food_truck.activity_food_truck.FoodTruckActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".activities_fragments.food_truck.activity_home_food_truck.HomeFoodTruckActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".activities_fragments.food_truck.activity_map_food_truck.MapFoodTruckActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
             android:name=".activities_fragments.banquete.activity_banquete_book.BanqueteBookActivity"
             android:configChanges="keyboardHidden|screenSize|orientation"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
