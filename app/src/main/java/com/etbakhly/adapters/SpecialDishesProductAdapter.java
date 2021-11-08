@@ -9,20 +9,20 @@ import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.etbakhly.R;
-import com.etbakhly.databinding.NearProductRowBinding;
 import com.etbakhly.databinding.SpecialDishesProductRowBinding;
+import com.etbakhly.models.SpecialKitchenModel;
 
 import java.util.List;
 
 public class SpecialDishesProductAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    private List<Object> list;
+    private List<SpecialKitchenModel> list;
     private Context context;
     private LayoutInflater inflater;
 
 
 
-    public SpecialDishesProductAdapter(List<Object> list, Context context) {
+    public SpecialDishesProductAdapter(List<SpecialKitchenModel> list, Context context) {
         this.list = list;
         this.context = context;
         inflater = LayoutInflater.from(context);
@@ -44,6 +44,7 @@ public class SpecialDishesProductAdapter extends RecyclerView.Adapter<RecyclerVi
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
 
         MyHolder myHolder = (MyHolder) holder;
+        myHolder.binding.setModel(list.get(position));
 
 
 
@@ -52,7 +53,7 @@ public class SpecialDishesProductAdapter extends RecyclerView.Adapter<RecyclerVi
 
     @Override
     public int getItemCount() {
-        return 6;
+        return list.size();
     }
 
     public static class MyHolder extends RecyclerView.ViewHolder {

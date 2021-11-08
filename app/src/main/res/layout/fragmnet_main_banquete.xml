@@ -81,6 +81,7 @@
                 android:textSize="15sp"
                 android:textStyle="bold" />
             <FrameLayout
+                android:id="@+id/flCategory"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -94,6 +95,7 @@
                     android:layout_marginEnd="10dp" />
 
                 <ProgressBar
+                    android:id="@+id/progBarCategory"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                    android:visibility="gone"
@@ -122,6 +124,7 @@
                 android:textSize="15sp"
                 android:textStyle="bold" />
             <FrameLayout
+                android:id="@+id/flMostFamous"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -135,6 +138,7 @@
                     android:layout_marginEnd="10dp" />
 
                 <ProgressBar
+                    android:id="@+id/progBarMostFamous"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                   android:visibility="gone"
@@ -163,6 +167,7 @@
                 android:textSize="15sp"
                 android:textStyle="bold" />
             <FrameLayout
+                android:id="@+id/flSpecial"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -176,6 +181,7 @@
                     android:layout_marginEnd="10dp" />
 
                 <ProgressBar
+                    android:id="@+id/progBarSpecial"
                     android:layout_width="wrap_content"
                    android:visibility="gone"
                     android:layout_height="wrap_content"
@@ -203,6 +209,7 @@
                 android:textSize="15sp"
                 android:textStyle="bold" />
             <FrameLayout
+                android:id="@+id/flDelivery"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -216,6 +223,7 @@
                     android:layout_marginEnd="10dp" />
 
                 <ProgressBar
+                    android:id="@+id/progBarDelivery"
                     android:layout_width="wrap_content"
                     android:visibility="gone"
                     android:layout_height="wrap_content"

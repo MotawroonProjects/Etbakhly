@@ -7,6 +7,9 @@
         <variable
             name="sliderData"
             type="String" />
+        <variable
+            name="model"
+            type="com.etbakhly.models.SliderModel" />
 
     </data>
 
@@ -20,7 +23,7 @@
             android:id="@+id/iv_auto_image_slider"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-
+            image="@{model.photo}"
             android:src="@drawable/slider"
             app:riv_corner_radius="20dp"
 

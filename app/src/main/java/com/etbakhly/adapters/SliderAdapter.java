@@ -11,15 +11,16 @@ import androidx.viewpager.widget.PagerAdapter;
 
 import com.etbakhly.R;
 import com.etbakhly.databinding.SliderRowBinding;
+import com.etbakhly.models.SliderModel;
 
 import java.util.List;
 
 public class SliderAdapter extends PagerAdapter {
-    private List<Object> list;
+    private List<SliderModel> list;
     private Context context;
     private LayoutInflater inflater;
 
-    public SliderAdapter(List<Object> list, Context context) {
+    public SliderAdapter(List<SliderModel> list, Context context) {
         this.list = list;
         this.context = context;
         inflater = LayoutInflater.from(context);
@@ -39,6 +40,7 @@ public class SliderAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
         SliderRowBinding binding = DataBindingUtil.inflate(inflater, R.layout.slider_row, container, false);
+        binding.setModel(list.get(position));
         container.addView(binding.getRoot());
         return binding.getRoot();
     }

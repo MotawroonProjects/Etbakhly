@@ -73,11 +73,11 @@ public class Fragment_Home extends Fragment {
         list = new ArrayList<>();
 
         binding.recviewCategory.setLayoutManager(new LinearLayoutManager(activity, RecyclerView.HORIZONTAL, false));
-        binding.recviewCategory.setAdapter(new CategoryAdapter(list, activity));
+      //  binding.recviewCategory.setAdapter(new CategoryAdapter(list, activity));
         binding.recviewnear.setLayoutManager(new LinearLayoutManager(activity, RecyclerView.HORIZONTAL, false));
-        binding.recviewnear.setAdapter(new KitchenBanqueteAdapter(list, activity));
+        //binding.recviewnear.setAdapter(new KitchenBanqueteAdapter(list, activity));
         binding.recviewSpecial.setLayoutManager(new LinearLayoutManager(activity, RecyclerView.HORIZONTAL, false));
-        binding.recviewSpecial.setAdapter(new KitchenBanqueteAdapter(list, activity));
+        //binding.recviewSpecial.setAdapter(new KitchenBanqueteAdapter(list, activity));
 
         updateSliderUi();
 
@@ -141,7 +141,7 @@ public class Fragment_Home extends Fragment {
         sliderModelList.add(new Object());
         sliderModelList.add(new Object());
 
-        sliderAdapter = new SliderAdapter(sliderModelList, activity);
+      //  sliderAdapter = new SliderAdapter(sliderModelList, activity);
         binding.pager.setAdapter(sliderAdapter);
         binding.tab.setupWithViewPager(binding.pager);
         binding.pager.setClipToPadding(false);

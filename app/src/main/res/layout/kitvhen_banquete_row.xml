@@ -11,6 +11,9 @@
 
         <import type="android.view.View" />
 
+        <variable
+            name="model"
+            type="com.etbakhly.models.MostFamousModel" />
 
     </data>
 
@@ -37,7 +40,7 @@
                     android:layout_height="150dp"
                     android:layout_gravity="center"
                     android:layout_marginBottom="5dp"
-
+                    image="@{model.sub_photo}"
                     android:scaleType="fitXY"
                     android:src="@drawable/slider"
 
@@ -89,7 +92,7 @@
                     android:layout_gravity="center"
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp"
-                    android:text="مطبخ الامانة"
+                    android:text="@{model.titel}"
                     android:textColor="@color/black"
                     android:textSize="14sp" />
 
@@ -99,6 +102,7 @@
                     android:layout_weight="1" />
 
                 <ImageView
+                    android:visibility="gone"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_gravity="center"
@@ -107,6 +111,7 @@
                     app:tint="@color/rate_color" />
 
                 <TextView
+                    android:visibility="gone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -124,10 +129,11 @@
                 android:gravity="center"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
-                android:text='مؤكولات شعبية'
+                android:text="@{model.notes}"
                 android:textColor="@color/gray21"
                 android:textSize="13sp" />
             <LinearLayout
+                android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
@@ -135,6 +141,7 @@
 
 
                 <ImageView
+
                     android:layout_width="20dp"
                     android:layout_height="20dp"
 
@@ -156,6 +163,8 @@
 
 
             <LinearLayout
+                android:visibility="gone"
+                android:layout_marginBottom="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">

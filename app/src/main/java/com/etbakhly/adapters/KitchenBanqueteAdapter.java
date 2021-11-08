@@ -11,21 +11,20 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.etbakhly.R;
 import com.etbakhly.activities_fragments.banquete.activity_home_banquete.HomeBanqueteActivity;
-import com.etbakhly.activities_fragments.independent.activity_home_independent.HomeActivity;
 import com.etbakhly.databinding.KitvhenBanqueteRowBinding;
-import com.etbakhly.databinding.MostFamousChefRowBinding;
+import com.etbakhly.models.MostFamousModel;
 
 import java.util.List;
 
 public class KitchenBanqueteAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    private List<Object> list;
+    private List<MostFamousModel> list;
     private Context context;
     private LayoutInflater inflater;
 
 
 
-    public KitchenBanqueteAdapter(List<Object> list, Context context) {
+    public KitchenBanqueteAdapter(List<MostFamousModel> list, Context context) {
         this.list = list;
         this.context = context;
         inflater = LayoutInflater.from(context);
@@ -47,7 +46,8 @@ public class KitchenBanqueteAdapter extends RecyclerView.Adapter<RecyclerView.Vi
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
 
         MyHolder myHolder = (MyHolder) holder;
-myHolder.itemView.setOnClickListener(new View.OnClickListener() {
+        myHolder.binding.setModel(list.get(position));
+        myHolder.itemView.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
         if(context instanceof HomeBanqueteActivity){
@@ -63,7 +63,7 @@ myHolder.itemView.setOnClickListener(new View.OnClickListener() {
 
     @Override
     public int getItemCount() {
-        return 6;
+        return list.size();
     }
 
     public static class MyHolder extends RecyclerView.ViewHolder {

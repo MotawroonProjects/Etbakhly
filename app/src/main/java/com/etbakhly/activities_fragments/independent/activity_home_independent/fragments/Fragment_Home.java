@@ -77,11 +77,11 @@ public class Fragment_Home extends Fragment {
         binding.recviewMostFamous.setLayoutManager(new LinearLayoutManager(activity, RecyclerView.HORIZONTAL, false));
         binding.recviewMostFamous.setAdapter(new MostFamousChefAdapter(list, activity));
         binding.recviewCategory.setLayoutManager(new LinearLayoutManager(activity, RecyclerView.HORIZONTAL, false));
-        binding.recviewCategory.setAdapter(new CategoryAdapter(list, activity));
+      //  binding.recviewCategory.setAdapter(new CategoryAdapter(list, activity));
         binding.recviewnear.setLayoutManager(new LinearLayoutManager(activity, RecyclerView.HORIZONTAL, false));
         binding.recviewnear.setAdapter(new NearProductAdapter(list, activity));
         binding.recviewSpecial.setLayoutManager(new LinearLayoutManager(activity, RecyclerView.HORIZONTAL, false));
-        binding.recviewSpecial.setAdapter(new SpecialDishesProductAdapter(list, activity));
+       // binding.recviewSpecial.setAdapter(new SpecialDishesProductAdapter(list, activity));
         updateSliderUi();
 
 
@@ -144,7 +144,7 @@ public class Fragment_Home extends Fragment {
         sliderModelList.add(new Object());
         sliderModelList.add(new Object());
 
-        sliderAdapter = new SliderAdapter(sliderModelList, activity);
+      //  sliderAdapter = new SliderAdapter(sliderModelList, activity);
         binding.pager.setAdapter(sliderAdapter);
         binding.tab.setupWithViewPager(binding.pager);
         binding.pager.setClipToPadding(false);

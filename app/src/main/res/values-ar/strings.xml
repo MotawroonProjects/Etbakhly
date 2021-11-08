@@ -53,7 +53,7 @@
     <string name="high_rate">High Rate</string>
     <string name="near">Near</string>
     <string name="done">Done</string>
-=    <string name="rate2">Rate</string>
+    =    <string name="rate2">Rate</string>
     <string name="delivery_method">Delivery method</string>
     <string name="delivery">Delivery</string>
     <string name="did_not_matter">Did not matter</string>

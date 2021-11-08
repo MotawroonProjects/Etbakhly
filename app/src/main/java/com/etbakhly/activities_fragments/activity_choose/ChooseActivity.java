@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
@@ -65,15 +66,18 @@ public class ChooseActivity extends AppCompatActivity {
         binding.flfoodcar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ChooseActivity.this, MapFoodTruckActivity.class);
-                startActivity(intent);
+                Toast.makeText(ChooseActivity.this, getResources().getString(R.string.Soon), Toast.LENGTH_SHORT).show();
+//                Intent intent = new Intent(ChooseActivity.this, MapFoodTruckActivity.class);
+//                startActivity(intent);
             }
         });
         binding.flIndependent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ChooseActivity.this, MapActivity.class);
-                launcher.launch(intent);
+                Toast.makeText(ChooseActivity.this, getResources().getString(R.string.Soon), Toast.LENGTH_SHORT).show();
+
+//                Intent intent = new Intent(ChooseActivity.this, MapActivity.class);
+//                launcher.launch(intent);
             }
         });
 

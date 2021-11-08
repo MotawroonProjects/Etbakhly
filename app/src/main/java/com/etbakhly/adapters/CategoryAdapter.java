@@ -10,22 +10,20 @@ import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.etbakhly.R;
-import com.etbakhly.activities_fragments.banquete.activity_home_banquete.HomeBanqueteActivity;
 import com.etbakhly.activities_fragments.food_truck.activity_home_food_truck.HomeFoodTruckActivity;
 import com.etbakhly.databinding.CategoryRowBinding;
-import com.etbakhly.databinding.MostFamousChefRowBinding;
+import com.etbakhly.models.CategoryModel;
 
 import java.util.List;
 
 public class CategoryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    private List<Object> list;
+    private List<CategoryModel> list;
     private Context context;
     private LayoutInflater inflater;
 
 
-
-    public CategoryAdapter(List<Object> list, Context context) {
+    public CategoryAdapter(List<CategoryModel> list, Context context) {
         this.list = list;
         this.context = context;
         inflater = LayoutInflater.from(context);
@@ -47,7 +45,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
 
         MyHolder myHolder = (MyHolder) holder;
-
+        myHolder.binding.setModel(list.get(position));
         myHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -63,7 +61,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
 
     @Override
     public int getItemCount() {
-        return 6;
+        return list.size();
     }
 
     public static class MyHolder extends RecyclerView.ViewHolder {
