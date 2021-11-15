@@ -36,6 +36,7 @@ public class FoodDetialsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
 
+
         FoodDetialsRowBinding binding = DataBindingUtil.inflate(inflater, R.layout.food_detials_row, parent, false);
         return new MyHolder(binding);
 
