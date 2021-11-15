@@ -1,8 +1,9 @@
 package com.etbakhly.models;
 
 import java.io.Serializable;
+import java.util.List;
 
-public class SpecialKitchenModel implements Serializable {
+public class KitchenModel implements Serializable {
     private int id;
     private String category_id;
     private String titel;
@@ -19,6 +20,12 @@ public class SpecialKitchenModel implements Serializable {
     private String sub_photo;
     private String created_at;
     private String updated_at;
+
+    public List<Photo> getPhotos() {
+        return photos;
+    }
+
+    public List<Photo> photos;
 
     public int getId() {
         return id;
@@ -83,4 +90,33 @@ public class SpecialKitchenModel implements Serializable {
     public String getUpdated_at() {
         return updated_at;
     }
+
+    public class Photo implements Serializable{
+        public int id;
+        public int caterers_id;
+        public String photo;
+        public String created_at;
+        public String updated_at;
+
+        public int getId() {
+            return id;
+        }
+
+        public int getCaterers_id() {
+            return caterers_id;
+        }
+
+        public String getPhoto() {
+            return photo;
+        }
+
+        public String getCreated_at() {
+            return created_at;
+        }
+
+        public String getUpdated_at() {
+            return updated_at;
+        }
+    }
 }
+

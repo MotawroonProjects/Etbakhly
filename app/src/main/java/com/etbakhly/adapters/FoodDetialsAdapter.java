@@ -11,20 +11,20 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.etbakhly.R;
 import com.etbakhly.activities_fragments.banquete.activity_home_banquete.HomeBanqueteActivity;
-import com.etbakhly.databinding.BuffetRowBinding;
 import com.etbakhly.databinding.FoodDetialsRowBinding;
+import com.etbakhly.models.Dish;
 
 import java.util.List;
 
 public class FoodDetialsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    private List<Object> list;
+    private List<Dish> list;
     private Context context;
     private LayoutInflater inflater;
 
 
 
-    public FoodDetialsAdapter(List<Object> list, Context context) {
+    public FoodDetialsAdapter(List<Dish> list, Context context) {
         this.list = list;
         this.context = context;
         inflater = LayoutInflater.from(context);
@@ -46,6 +46,7 @@ public class FoodDetialsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
 
         MyHolder myHolder = (MyHolder) holder;
+        myHolder.binding.setModel(list.get(position));
 myHolder.itemView.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
@@ -62,7 +63,7 @@ myHolder.itemView.setOnClickListener(new View.OnClickListener() {
 
     @Override
     public int getItemCount() {
-        return 16;
+        return list.size();
     }
 
     public static class MyHolder extends RecyclerView.ViewHolder {

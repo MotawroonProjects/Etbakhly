@@ -55,7 +55,7 @@ public class FoodTruckActivity extends AppCompatActivity {
 
         list = new ArrayList<>();
         binding.recView.setLayoutManager(new LinearLayoutManager(this));
-        binding.recView.setAdapter(new IndependentChiefAdapter(list, this));
+       // binding.recView.setAdapter(new IndependentChiefAdapter(list, this));
        layoutManager =
                 new GridLayoutManager(this, 2, GridLayoutManager.HORIZONTAL, false);
         binding.recviewCategories.setLayoutManager(layoutManager);

@@ -1,12 +1,12 @@
 package com.etbakhly.services;
 
 
+import com.etbakhly.models.BuffetDataModel;
 import com.etbakhly.models.CategoryDataModel;
-import com.etbakhly.models.MostFamousDataModel;
+import com.etbakhly.models.KitchenDataModel;
 import com.etbakhly.models.PlaceGeocodeData;
 import com.etbakhly.models.PlaceMapDetailsData;
 import com.etbakhly.models.SliderDataModel;
-import com.etbakhly.models.SpecialKitchenDataModel;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -32,16 +32,23 @@ public interface Service {
 
 
     @GET("api/Catering/most_famous")
-    Call<MostFamousDataModel> getFamous(@Query(value = "latitude") String latitude,
+    Call<KitchenDataModel> getFamous(@Query(value = "latitude") String latitude,
                                         @Query(value = "longitude") String longitude);
 
     @GET("api/Catering/Caterer_is_special")
-    Call<SpecialKitchenDataModel> getSpecialKitchen();
+    Call<KitchenDataModel> getSpecialKitchen();
 
     @GET("api/Catering/Caterer_free_delivery")
-    Call<SpecialKitchenDataModel> getFreeDelivery();
+    Call<KitchenDataModel> getFreeDelivery();
 
     @GET("api/Catering/indexSlider")
     Call<SliderDataModel> getSlider();
+
+    @GET("api/Catering/indexCaterer")
+    Call<KitchenDataModel> getKitchenCategory(@Query(value = "category_id") String category_id);
+
+    @GET("api/Catering/indexBuffets")
+    Call<BuffetDataModel> getBuffetList();
+
 
 }

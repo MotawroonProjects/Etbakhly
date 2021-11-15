@@ -55,7 +55,7 @@ private List<Object> list;
         Paper.init(activity);
         lang = Paper.book().read("lang", "ar");
         binding.recView.setLayoutManager(new GridLayoutManager(activity,3));
-        binding.recView.setAdapter(new OfferImagesAdapter(list, activity));
+       // binding.recView.setAdapter(new OfferImagesAdapter(list, activity));
     }
 
 

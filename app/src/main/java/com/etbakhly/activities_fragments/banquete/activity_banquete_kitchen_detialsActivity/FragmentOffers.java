@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import com.etbakhly.R;
 import com.etbakhly.adapters.OfferImagesAdapter;
 import com.etbakhly.databinding.FragmentOrdersBinding;
+import com.etbakhly.models.KitchenModel;
 import com.etbakhly.models.UserModel;
 import com.etbakhly.preferences.Preferences;
 
@@ -30,11 +31,17 @@ public class FragmentOffers extends Fragment {
     private Preferences preferences;
     private String lang;
     private UserModel userModel;
-private List<Object> list;
+    private KitchenModel kitchenModel;
+    private List<KitchenModel.Photo> list;
 
 
-    public static FragmentOffers newInstance() {
-        return new FragmentOffers();
+    public static FragmentOffers newInstance(KitchenModel kitchenModel) {
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("edttext",kitchenModel );
+// set Fragmentclass Arguments
+        FragmentOffers fragobj = new FragmentOffers();
+        fragobj.setArguments(bundle);
+        return fragobj;
     }
 
     @Nullable
@@ -48,7 +55,9 @@ private List<Object> list;
 
 
     private void initView() {
+        kitchenModel= (KitchenModel) getArguments().getSerializable("edttext");
         list=new ArrayList<>();
+        list.addAll(kitchenModel.getPhotos());
         activity = (BanqueteKitchenDetialsActivity) getActivity();
         preferences = Preferences.getInstance();
         userModel = preferences.getUserData(activity);

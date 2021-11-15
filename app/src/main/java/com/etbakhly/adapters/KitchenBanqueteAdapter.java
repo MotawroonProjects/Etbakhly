@@ -7,26 +7,30 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.etbakhly.R;
 import com.etbakhly.activities_fragments.banquete.activity_home_banquete.HomeBanqueteActivity;
+import com.etbakhly.activities_fragments.banquete.activity_home_banquete.fragments.Fragment_Home;
 import com.etbakhly.databinding.KitvhenBanqueteRowBinding;
-import com.etbakhly.models.MostFamousModel;
+import com.etbakhly.models.KitchenModel;
 
 import java.util.List;
 
 public class KitchenBanqueteAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    private List<MostFamousModel> list;
+    private List<KitchenModel> list;
     private Context context;
     private LayoutInflater inflater;
+    Fragment fragment;
 
 
 
-    public KitchenBanqueteAdapter(List<MostFamousModel> list, Context context) {
+    public KitchenBanqueteAdapter(List<KitchenModel> list, Context context,Fragment fragment) {
         this.list = list;
         this.context = context;
+        this.fragment=fragment;
         inflater = LayoutInflater.from(context);
 
 
@@ -50,9 +54,9 @@ public class KitchenBanqueteAdapter extends RecyclerView.Adapter<RecyclerView.Vi
         myHolder.itemView.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
-        if(context instanceof HomeBanqueteActivity){
-            HomeBanqueteActivity activity=(HomeBanqueteActivity) context;
-            activity.show();
+        if(fragment instanceof Fragment_Home){
+            Fragment_Home fragment_home = (Fragment_Home) fragment;
+            fragment_home.showMost(list.get(holder.getLayoutPosition()));
         }
     }
 });

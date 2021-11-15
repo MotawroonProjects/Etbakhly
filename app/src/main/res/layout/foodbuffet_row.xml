@@ -9,6 +9,9 @@
             name="currency"
             type="String" />
 
+        <variable
+            name="model"
+            type="com.etbakhly.models.CategorDish" />
         <import type="android.view.View" />
 
 
@@ -22,10 +25,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:text="@string/main_dishes"
+        android:text="@{model.titel}"
         android:textColor="@color/black"
         android:textSize="14sp" />
     <androidx.recyclerview.widget.RecyclerView

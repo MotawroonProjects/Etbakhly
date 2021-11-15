@@ -1,5 +1,6 @@
 package com.etbakhly.activities_fragments.banquete.activity_home_banquete.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -14,7 +15,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.etbakhly.R;
+import com.etbakhly.activities_fragments.banquete.activity_banquete_kitchen_detialsActivity.BanqueteKitchenDetialsActivity;
 import com.etbakhly.activities_fragments.banquete.activity_home_banquete.HomeBanqueteActivity;
+import com.etbakhly.activities_fragments.independent.activity_chief_indepndent.IndependentChiefActivity;
 import com.etbakhly.adapters.CategoryAdapter;
 import com.etbakhly.adapters.KitchenBanqueteAdapter;
 import com.etbakhly.adapters.SliderAdapter;
@@ -22,13 +25,11 @@ import com.etbakhly.adapters.SpecialDishesProductAdapter;
 import com.etbakhly.databinding.FragmnetMainBanqueteBinding;
 import com.etbakhly.models.CategoryDataModel;
 import com.etbakhly.models.CategoryModel;
-import com.etbakhly.models.MostFamousDataModel;
-import com.etbakhly.models.MostFamousModel;
+import com.etbakhly.models.KitchenDataModel;
+import com.etbakhly.models.KitchenModel;
 import com.etbakhly.models.SliderDataModel;
 import com.etbakhly.models.SliderModel;
 import com.etbakhly.models.UserModel;
-import com.etbakhly.models.SpecialKitchenDataModel;
-import com.etbakhly.models.SpecialKitchenModel;
 import com.etbakhly.preferences.Preferences;
 import com.etbakhly.remote.Api;
 import com.etbakhly.tags.Tags;
@@ -52,11 +53,11 @@ public class Fragment_Home extends Fragment {
     private UserModel userModel;
     private List<CategoryModel> categoryModelList;
     private CategoryAdapter categoryAdapter;
-    private List<MostFamousModel> mostFamousModelList;
+    private List<KitchenModel> mostFamousModelList;
     private KitchenBanqueteAdapter kitchenBanqueteAdapter;
-    private List<SpecialKitchenModel> specialKitchenModelList;
+    private List<KitchenModel> specialKitchenModelList;
     private SpecialDishesProductAdapter dishesProductAdapter;
-    private List<SpecialKitchenModel> provideFreeDelivery;
+    private List<KitchenModel> provideFreeDelivery;
     private SpecialDishesProductAdapter dishesProductAdapter2;
 
     private List<SliderModel> sliderModelList;
@@ -95,16 +96,16 @@ public class Fragment_Home extends Fragment {
         Paper.init(activity);
         lang = Paper.book().read("lang", "ar");
         categoryModelList = new ArrayList<>();
-        categoryAdapter=new CategoryAdapter(categoryModelList,activity);
+        categoryAdapter=new CategoryAdapter(categoryModelList,activity,this);
 
         mostFamousModelList=new ArrayList<>();
-        kitchenBanqueteAdapter=new KitchenBanqueteAdapter(mostFamousModelList,activity);
+        kitchenBanqueteAdapter=new KitchenBanqueteAdapter(mostFamousModelList,activity,this);
 
         specialKitchenModelList=new ArrayList<>();
-        dishesProductAdapter=new SpecialDishesProductAdapter(specialKitchenModelList,activity);
+        dishesProductAdapter=new SpecialDishesProductAdapter(specialKitchenModelList,activity,this);
 
         provideFreeDelivery=new ArrayList<>();
-        dishesProductAdapter2=new SpecialDishesProductAdapter(provideFreeDelivery,activity);
+        dishesProductAdapter2=new SpecialDishesProductAdapter(provideFreeDelivery,activity,this);
 
         binding.recviewCategory.setLayoutManager(new LinearLayoutManager(activity, RecyclerView.HORIZONTAL, false));
         binding.recviewCategory.setAdapter(categoryAdapter);
@@ -127,7 +128,7 @@ public class Fragment_Home extends Fragment {
     private void updateSliderUi(SliderDataModel body) {
         sliderModelList = new ArrayList<>();
 
-sliderModelList.addAll(body.getData());
+        sliderModelList.addAll(body.getData());
 
         sliderAdapter = new SliderAdapter(sliderModelList, activity);
         binding.pager.setAdapter(sliderAdapter);
@@ -216,9 +217,9 @@ sliderModelList.addAll(body.getData());
 
         Api.getService(Tags.base_url)
                 .getFamous("30.561057958676955","31.008107521307437")
-                .enqueue(new Callback<MostFamousDataModel>() {
+                .enqueue(new Callback<KitchenDataModel>() {
                     @Override
-                    public void onResponse(Call<MostFamousDataModel> call, Response<MostFamousDataModel> response) {
+                    public void onResponse(Call<KitchenDataModel> call, Response<KitchenDataModel> response) {
                         binding.progBarMostFamous.setVisibility(View.GONE);
                         if (response.isSuccessful()){
                             if (response.body()!=null && response.body().getStatus()==200){
@@ -250,7 +251,7 @@ sliderModelList.addAll(body.getData());
                     }
 
                     @Override
-                    public void onFailure(Call<MostFamousDataModel> call, Throwable t) {
+                    public void onFailure(Call<KitchenDataModel> call, Throwable t) {
 
                         try {
 
@@ -281,9 +282,9 @@ sliderModelList.addAll(body.getData());
         binding.flSpecial.setVisibility(View.VISIBLE);
         Api.getService(Tags.base_url)
                 .getSpecialKitchen()
-                .enqueue(new Callback<SpecialKitchenDataModel>() {
+                .enqueue(new Callback<KitchenDataModel>() {
                     @Override
-                    public void onResponse(Call<SpecialKitchenDataModel> call, Response<SpecialKitchenDataModel> response) {
+                    public void onResponse(Call<KitchenDataModel> call, Response<KitchenDataModel> response) {
                         binding.progBarSpecial.setVisibility(View.GONE);
                         if (response.isSuccessful()){
                             if (response.body()!=null && response.body().getStatus()==200){
@@ -297,6 +298,7 @@ sliderModelList.addAll(body.getData());
                                 }
                             }else {
                                 binding.flSpecial.setVisibility(View.GONE);
+
                             }
                         }else {
                             binding.flSpecial.setVisibility(View.GONE);
@@ -314,7 +316,7 @@ sliderModelList.addAll(body.getData());
                     }
 
                     @Override
-                    public void onFailure(Call<SpecialKitchenDataModel> call, Throwable t) {
+                    public void onFailure(Call<KitchenDataModel> call, Throwable t) {
 
                         try {
 
@@ -336,38 +338,39 @@ sliderModelList.addAll(body.getData());
                     }
                 });
     }
-    private void getFreeDelivery(){
+    private void getFreeDelivery() {
         provideFreeDelivery.clear();
         dishesProductAdapter2.notifyDataSetChanged();
         binding.progBarDelivery.setVisibility(View.VISIBLE);
         binding.flDelivery.setVisibility(View.VISIBLE);
         Api.getService(Tags.base_url)
                 .getFreeDelivery()
-                .enqueue(new Callback<SpecialKitchenDataModel>() {
+                .enqueue(new Callback<KitchenDataModel>() {
                     @Override
-                    public void onResponse(Call<SpecialKitchenDataModel> call, Response<SpecialKitchenDataModel> response) {
+                    public void onResponse(Call<KitchenDataModel> call, Response<KitchenDataModel> response) {
                         binding.progBarDelivery.setVisibility(View.GONE);
-                        if (response.isSuccessful()){
-                            if (response.body()!=null && response.body().getStatus()==200){
-                                if (response.body().getData()!=null){
-                                    if (response.body().getData().size()>0){
+                        if (response.isSuccessful()) {
+                            if (response.body() != null && response.body().getStatus() == 200) {
+                                if (response.body().getData() != null) {
+                                    if (response.body().getData().size() > 0) {
                                         provideFreeDelivery.addAll(response.body().getData());
                                         dishesProductAdapter2.notifyDataSetChanged();
-                                    }else {
+                                    } else {
                                         binding.flDelivery.setVisibility(View.GONE);
                                     }
                                 }
-                            }else {
+                            } else {
                                 binding.flDelivery.setVisibility(View.GONE);
                             }
-                        }else {
+                        } else {
                             binding.flDelivery.setVisibility(View.GONE);
-                            switch (response.code()){
+                            switch (response.code()) {
                                 case 500:
                                     break;
                                 default:
                                     break;
-                            }try {
+                            }
+                            try {
                                 Log.e("error_code", response.code() + "_");
                             } catch (NullPointerException e) {
 
@@ -376,7 +379,7 @@ sliderModelList.addAll(body.getData());
                     }
 
                     @Override
-                    public void onFailure(Call<SpecialKitchenDataModel> call, Throwable t) {
+                    public void onFailure(Call<KitchenDataModel> call, Throwable t) {
 
                         try {
 
@@ -392,7 +395,7 @@ sliderModelList.addAll(body.getData());
                                     //  Toast.makeText(SignUpActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
                                 }
                             }
-                        }catch (Exception e){
+                        } catch (Exception e) {
 
                         }
                     }
@@ -442,6 +445,23 @@ sliderModelList.addAll(body.getData());
               });
     }
 
+    public void showCategory(CategoryModel categoryModel) {
+        Intent intent=new Intent(activity,IndependentChiefActivity.class);
+        intent.putExtra("data",categoryModel);
+        startActivity(intent);
+    }
+
+    public void showMost(KitchenModel kitchenModel) {
+        Intent intent=new Intent(activity, BanqueteKitchenDetialsActivity.class);
+        intent.putExtra("data",kitchenModel);
+        startActivity(intent);
+    }
+
+    public void showSpecial(KitchenModel kitchenModel) {
+        Intent intent=new Intent(activity,BanqueteKitchenDetialsActivity.class);
+        intent.putExtra("data",kitchenModel);
+        startActivity(intent);
+    }
 
 
     public class MyTask extends TimerTask {
@@ -459,7 +479,6 @@ sliderModelList.addAll(body.getData());
 
         }
     }
-
 
     @Override
     public void onDestroy() {

@@ -1,5 +1,6 @@
 package com.etbakhly.adapters;
 
+import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,23 +12,24 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.etbakhly.R;
 import com.etbakhly.activities_fragments.banquete.activity_buffet_banquete.BuffetActivity;
-import com.etbakhly.activities_fragments.banquete.activity_home_banquete.HomeBanqueteActivity;
 import com.etbakhly.databinding.BuffetRowBinding;
-import com.etbakhly.databinding.KitvhenBanqueteRowBinding;
+import com.etbakhly.models.BuffetModel;
 
 import java.util.List;
 
 public class BuffetBanqueteAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    private List<Object> list;
+    private List<BuffetModel> list;
     private Context context;
     private LayoutInflater inflater;
+    Activity activity;
 
 
 
-    public BuffetBanqueteAdapter(List<Object> list, Context context) {
+    public BuffetBanqueteAdapter(List<BuffetModel> list, Context context, Activity activity) {
         this.list = list;
         this.context = context;
+        this.activity=activity;
         inflater = LayoutInflater.from(context);
 
 
@@ -47,12 +49,13 @@ public class BuffetBanqueteAdapter extends RecyclerView.Adapter<RecyclerView.Vie
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
 
         MyHolder myHolder = (MyHolder) holder;
-myHolder.itemView.setOnClickListener(new View.OnClickListener() {
+        myHolder.binding.setModel(list.get(position));
+        myHolder.itemView.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
-        if(context instanceof BuffetActivity){
-            BuffetActivity activity=(BuffetActivity) context;
-            activity.show();
+        if(activity instanceof BuffetActivity){
+            BuffetActivity activityBuffet=(BuffetActivity) activity;
+            activityBuffet.showBuffet(list.get(holder.getLayoutPosition()));
         }
     }
 });
@@ -63,7 +66,7 @@ myHolder.itemView.setOnClickListener(new View.OnClickListener() {
 
     @Override
     public int getItemCount() {
-        return 6;
+        return list.size();
     }
 
     public static class MyHolder extends RecyclerView.ViewHolder {

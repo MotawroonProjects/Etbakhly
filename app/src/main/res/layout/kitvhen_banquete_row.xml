@@ -13,7 +13,7 @@
 
         <variable
             name="model"
-            type="com.etbakhly.models.MostFamousModel" />
+            type="com.etbakhly.models.KitchenModel" />
 
     </data>
 

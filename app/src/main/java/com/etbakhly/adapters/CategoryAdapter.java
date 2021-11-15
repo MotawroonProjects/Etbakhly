@@ -7,9 +7,12 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.etbakhly.R;
+import com.etbakhly.activities_fragments.banquete.activity_home_banquete.HomeBanqueteActivity;
+import com.etbakhly.activities_fragments.banquete.activity_home_banquete.fragments.Fragment_Home;
 import com.etbakhly.activities_fragments.food_truck.activity_home_food_truck.HomeFoodTruckActivity;
 import com.etbakhly.databinding.CategoryRowBinding;
 import com.etbakhly.models.CategoryModel;
@@ -21,15 +24,17 @@ public class CategoryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
     private List<CategoryModel> list;
     private Context context;
     private LayoutInflater inflater;
+    private Fragment fragment;
 
-
-    public CategoryAdapter(List<CategoryModel> list, Context context) {
+    public CategoryAdapter(List<CategoryModel> list, Context context, Fragment fragment) {
         this.list = list;
         this.context = context;
+        this.fragment=fragment;
         inflater = LayoutInflater.from(context);
 
 
     }
+
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -49,9 +54,9 @@ public class CategoryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
         myHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(context instanceof HomeFoodTruckActivity){
-                    HomeFoodTruckActivity activity=(HomeFoodTruckActivity) context;
-                    activity.show();
+                if (fragment instanceof Fragment_Home) {
+                    Fragment_Home fragment_home = (Fragment_Home) fragment;
+                    fragment_home.showCategory(list.get(holder.getLayoutPosition()));
                 }
             }
         });
@@ -73,8 +78,6 @@ public class CategoryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
 
         }
     }
-
-
 
 
 }

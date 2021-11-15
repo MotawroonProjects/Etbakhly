@@ -22,7 +22,6 @@ public class MostFamousChefAdapter extends RecyclerView.Adapter<RecyclerView.Vie
     private LayoutInflater inflater;
 
 
-
     public MostFamousChefAdapter(List<Object> list, Context context) {
         this.list = list;
         this.context = context;
@@ -45,7 +44,7 @@ public class MostFamousChefAdapter extends RecyclerView.Adapter<RecyclerView.Vie
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
 
         MyHolder myHolder = (MyHolder) holder;
-myHolder.itemView.setOnClickListener(new View.OnClickListener() {
+        myHolder.itemView.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
         if(context instanceof HomeActivity){
@@ -54,8 +53,6 @@ myHolder.itemView.setOnClickListener(new View.OnClickListener() {
         }
     }
 });
-
-
 
     }
 

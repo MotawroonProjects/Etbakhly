@@ -9,6 +9,9 @@
         <variable
             name="lang"
             type="String" />
+        <variable
+            name="model"
+            type="com.etbakhly.models.BuffetModel" />
     </data>
 
     <FrameLayout
@@ -78,6 +81,7 @@
             android:layout_height="200dp">
 
             <ImageView
+                image="@{model.photo}"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="fitXY"
@@ -109,7 +113,7 @@
                 android:layout_gravity="center"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
-                android:text="بوفيه حفلات"
+                android:text="@{model.titel}"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
 
@@ -224,7 +228,7 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp"
                     android:gravity="center"
-                    android:text="3 اشخاص "
+                    android:text='@{model.number_people+""}'
                     android:layout_gravity="center"
                     android:textColor="@color/black"
                     android:textSize="13sp" />
@@ -247,7 +251,7 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp"
                     android:gravity="center"
-                    android:text="3 ساعات"
+                    android:text='@{model.order_time+""}'
                     android:layout_gravity="center"
                     android:textColor="@color/black"
                     android:textSize="13sp" />
@@ -270,7 +274,7 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp"
                     android:gravity="center"
-                    android:text="نساء"
+                    android:text="@{model.service_provider_type}"
                     android:layout_gravity="center"
                     android:textColor="@color/black"
                     android:textSize="13sp" />
@@ -286,7 +290,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
+                android:layout_gravity="start"
+                android:layout_marginTop="20dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
                 android:text="@string/food_menu"

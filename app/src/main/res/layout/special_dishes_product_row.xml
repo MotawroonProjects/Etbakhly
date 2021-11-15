@@ -12,7 +12,7 @@
         <import type="android.view.View" />
         <variable
             name="model"
-            type="com.etbakhly.models.SpecialKitchenModel" />
+            type="com.etbakhly.models.KitchenModel" />
 
 
     </data>

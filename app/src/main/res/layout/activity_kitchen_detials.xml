@@ -9,6 +9,9 @@
         <variable
             name="lang"
             type="String" />
+        <variable
+            name="model"
+            type="com.etbakhly.models.KitchenModel" />
     </data>
 
     <FrameLayout
@@ -77,23 +80,24 @@
             android:layout_width="match_parent"
             android:layout_height="200dp">
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="fitXY"
-                android:src="@drawable/chiefd" />
-            <!--                <androidx.viewpager.widget.ViewPager-->
-            <!--                    android:id="@+id/pager"-->
-            <!--                    android:layout_width="match_parent"-->
-            <!--                    android:layout_height="match_parent" />-->
+<!--            <ImageView-->
+
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:scaleType="fitXY"-->
+<!--                android:src="@drawable/chiefd" />-->
+                            <androidx.viewpager.widget.ViewPager
+                                android:id="@+id/pager1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
 
 
-            <!--                <ProgressBar-->
-            <!--                    android:id="@+id/progBarSlider"-->
-            <!--                    android:layout_width="35dp"-->
-            <!--                    android:layout_height="35dp"-->
-            <!--                  android:visibility="gone"-->
-            <!--                    android:layout_gravity="center" />-->
+                            <ProgressBar
+                                android:id="@+id/progBarSlider"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                              android:visibility="gone"
+                                android:layout_gravity="center" />
         </FrameLayout>
 
 
@@ -109,7 +113,7 @@
                 android:layout_gravity="center"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
-                android:text="مطبخ الامانه"
+                android:text="@{model.titel}"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
 
@@ -119,6 +123,7 @@
                 android:layout_weight="1" />
 
             <ImageView
+                android:visibility="gone"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_gravity="center"
@@ -127,6 +132,7 @@
                 app:tint="@color/rate_color" />
 
             <TextView
+                android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -148,6 +154,7 @@
 
 
             <ImageView
+                android:visibility="gone"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
 
@@ -157,6 +164,7 @@
                 tools:ignore="RtlCompat" />
 
             <TextView
+                android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -176,6 +184,7 @@ android:text="السعودية ، جدة ، مقابل السوق المركزي
 
 
             <ImageView
+                android:visibility="gone"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
 
@@ -190,12 +199,13 @@ android:text="السعودية ، جدة ، مقابل السوق المركزي
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
                 android:gravity="center"
-                android:text='يوميا من الساعة 8 صباحا الى 10 مساءا'
+                android:text='@{model.notes}'
                 android:textColor="@color/gray21"
                 android:textSize="13sp" />
 
         </LinearLayout>
 <LinearLayout
+    android:visibility="gone"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
@@ -287,6 +297,7 @@ android:text="السعودية ، جدة ، مقابل السوق المركزي
 
 </LinearLayout>
         <LinearLayout
+            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"

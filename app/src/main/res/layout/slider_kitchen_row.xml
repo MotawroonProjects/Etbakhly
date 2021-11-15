@@ -15,17 +15,15 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_margin="5dp"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         app:cardCornerRadius="10dp">
 
         <com.github.siyamed.shapeimageview.RoundedImageView
-            image="@{model.photo}"
             android:id="@+id/iv_auto_image_slider"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_gravity="center"
+            image="@{model.photo}"
             android:src="@drawable/slider"
             app:riv_corner_radius="20dp"
 

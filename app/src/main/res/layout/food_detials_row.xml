@@ -11,6 +11,9 @@
 
         <import type="android.view.View" />
 
+        <variable
+            name="model"
+            type="com.etbakhly.models.Dish" />
 
     </data>
 
@@ -36,7 +39,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
-
+                    image="@{model.photo}"
                     android:scaleType="fitXY"
                     android:src="@drawable/slider"
 
@@ -62,7 +65,7 @@
             android:layout_gravity="center"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
-            android:text="بيتزا بالخضار"
+            android:text="@{model.titel}"
             android:textColor="@color/black"
             android:textSize="14sp" />
 
@@ -91,7 +94,7 @@
             android:layout_height="wrap_content"
 
             android:gravity="center"
-            android:text="100"
+            android:text='@{model.qty+""}'
             android:textColor="@color/gray32"
             android:textSize="13sp" />
 

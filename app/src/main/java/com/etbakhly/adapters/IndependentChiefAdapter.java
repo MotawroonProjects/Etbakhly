@@ -14,18 +14,19 @@ import com.etbakhly.R;
 import com.etbakhly.activities_fragments.food_truck.activity_food_truck.FoodTruckActivity;
 import com.etbakhly.activities_fragments.independent.activity_chief_indepndent.IndependentChiefActivity;
 import com.etbakhly.databinding.ChifUserIndependentRowBinding;
+import com.etbakhly.models.KitchenModel;
 
 import java.util.List;
 
 public class IndependentChiefAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    private List<Object> list;
+    private List<KitchenModel> list;
     private Context context;
     private LayoutInflater inflater;
 
 
 
-    public IndependentChiefAdapter(List<Object> list, Context context) {
+    public IndependentChiefAdapter(List<KitchenModel> list, Context context) {
         this.list = list;
         this.context = context;
         inflater = LayoutInflater.from(context);
@@ -47,8 +48,7 @@ public class IndependentChiefAdapter extends RecyclerView.Adapter<RecyclerView.V
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
 
         MyHolder myHolder = (MyHolder) holder;
-
-
+        myHolder.binding.setModel(list.get(position));
         myHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -67,7 +67,7 @@ public class IndependentChiefAdapter extends RecyclerView.Adapter<RecyclerView.V
 
     @Override
     public int getItemCount() {
-        return 6;
+        return list.size();
     }
 
     public static class MyHolder extends RecyclerView.ViewHolder {
