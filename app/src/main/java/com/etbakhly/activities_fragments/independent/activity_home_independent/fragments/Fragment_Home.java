@@ -152,11 +152,11 @@ public class Fragment_Home extends Fragment {
         //binding.flslider.setVisibility(View.VISIBLE);
         binding.pager.setVisibility(View.VISIBLE);
 
-        if (sliderModelList.size() > 1) {
-            timer = new Timer();
-            timerTask = new MyTask();
-            timer.scheduleAtFixedRate(timerTask, 6000, 6000);
-        }
+//        if (sliderModelList.size() > 1) {
+//            timer = new Timer();
+//            timerTask = new MyTask();
+//            timer.scheduleAtFixedRate(timerTask, 6000, 6000);
+//        }
     }
     public class MyTask extends TimerTask {
         @Override

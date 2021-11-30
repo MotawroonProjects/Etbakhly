@@ -4,11 +4,16 @@ import java.io.Serializable;
 import java.util.List;
 
 public class CategorDish implements Serializable {
-    public int id;
-    public String titel;
-    public String created_at;
-    public String updated_at;
-    public List<Dish> dishes;
+    private int id;
+    private String titel;
+    private String created_at;
+    private String updated_at;
+    private List<Dish> dishes;
+    private double total;
+
+    public double getTotal() {
+        return total;
+    }
 
     public int getId() {
         return id;

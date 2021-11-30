@@ -88,6 +88,14 @@
         <entry key="..\:/Users/HP/Desktop/Etbakhly/app/src/main/res/layout/rate_row.xml" value="0.25" />
         <entry key="..\:/Users/HP/Desktop/Etbakhly/app/src/main/res/layout/slider_row.xml" value="0.14270833333333333" />
         <entry key="..\:/Users/HP/Desktop/Etbakhly/app/src/main/res/layout/special_dishes_product_row.xml" value="0.22509057971014493" />
+        <entry key="..\:/Users/STS/AndroidStudioProjects/etbakhly/app/src/main/res/drawable-v24/ic_camera.xml" value="0.25925925925925924" />
+        <entry key="..\:/Users/STS/AndroidStudioProjects/etbakhly/app/src/main/res/drawable-v24/ic_edit.xml" value="0.25925925925925924" />
+        <entry key="..\:/Users/STS/AndroidStudioProjects/etbakhly/app/src/main/res/drawable-v24/ic_gallery.xml" value="0.25925925925925924" />
+        <entry key="..\:/Users/STS/AndroidStudioProjects/etbakhly/app/src/main/res/drawable/bg_dialog.xml" value="0.2657407407407407" />
+        <entry key="..\:/Users/STS/AndroidStudioProjects/etbakhly/app/src/main/res/drawable/btn_confirm.xml" value="0.25925925925925924" />
+        <entry key="..\:/Users/STS/AndroidStudioProjects/etbakhly/app/src/main/res/drawable/circle_white.xml" value="0.25925925925925924" />
+        <entry key="..\:/Users/STS/AndroidStudioProjects/etbakhly/app/src/main/res/drawable/pin_view_item.xml" value="0.25925925925925924" />
+        <entry key="..\:/Users/STS/AndroidStudioProjects/etbakhly/app/src/main/res/drawable/rounded_shape.xml" value="0.2657407407407407" />
         <entry key="..\:/Users/STS/AndroidStudioProjects/etbakhly/app/src/main/res/layout/activity_banquete_book.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/STS/AndroidStudioProjects/etbakhly/app/src/main/res/layout/activity_buffet.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/STS/AndroidStudioProjects/etbakhly/app/src/main/res/layout/activity_buffet_detials.xml" value="0.24010416666666667" />
@@ -98,12 +106,15 @@
         <entry key="..\:/Users/STS/AndroidStudioProjects/etbakhly/app/src/main/res/layout/activity_independent_chef_detials.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/STS/AndroidStudioProjects/etbakhly/app/src/main/res/layout/activity_kitchen_detials.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/STS/AndroidStudioProjects/etbakhly/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/STS/AndroidStudioProjects/etbakhly/app/src/main/res/layout/activity_sign_up.xml" value="0.2509057971014493" />
         <entry key="..\:/Users/STS/AndroidStudioProjects/etbakhly/app/src/main/res/layout/activity_splash.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/STS/AndroidStudioProjects/etbakhly/app/src/main/res/layout/activity_verification_code.xml" value="0.2509057971014493" />
         <entry key="..\:/Users/STS/AndroidStudioProjects/etbakhly/app/src/main/res/layout/buffet_row.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/STS/AndroidStudioProjects/etbakhly/app/src/main/res/layout/cart_independent_row.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/STS/AndroidStudioProjects/etbakhly/app/src/main/res/layout/categories_row.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/STS/AndroidStudioProjects/etbakhly/app/src/main/res/layout/category_row.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/STS/AndroidStudioProjects/etbakhly/app/src/main/res/layout/chif_user_independent_row.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/STS/AndroidStudioProjects/etbakhly/app/src/main/res/layout/dialog_layout.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/STS/AndroidStudioProjects/etbakhly/app/src/main/res/layout/food_detials_row.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/STS/AndroidStudioProjects/etbakhly/app/src/main/res/layout/food_truck_map_row.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/STS/AndroidStudioProjects/etbakhly/app/src/main/res/layout/foodbuffet_row.xml" value="0.25416666666666665" />

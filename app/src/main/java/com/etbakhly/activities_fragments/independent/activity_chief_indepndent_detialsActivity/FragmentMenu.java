@@ -57,9 +57,9 @@ public class FragmentMenu extends Fragment {
         binding.recViewMost.setLayoutManager(new LinearLayoutManager(activity));
         binding.recViewOffers.setLayoutManager(new LinearLayoutManager(activity));
         binding.recViewMainDishes.setLayoutManager(new LinearLayoutManager(activity));
-        binding.recViewMost.setAdapter(new ProdustIndependentAdapter(list, activity));
-        binding.recViewOffers.setAdapter(new ProdustIndependentAdapter(list, activity));
-        binding.recViewMainDishes.setAdapter(new ProdustIndependentAdapter(list, activity));
+       // binding.recViewMost.setAdapter(new ProdustIndependentAdapter(list, activity));
+        //binding.recViewOffers.setAdapter(new ProdustIndependentAdapter(list, activity));
+        //binding.recViewMainDishes.setAdapter(new ProdustIndependentAdapter(list, activity));
         binding.llMainDishes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -1,5 +1,6 @@
 package com.etbakhly.activities_fragments.banquete.activity_banquete_kitchen_detialsActivity;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,6 +16,7 @@ import androidx.fragment.app.Fragment;
 import com.etbakhly.R;
 import com.etbakhly.activities_fragments.banquete.activity_banquete_book.BanqueteBookActivity;
 import com.etbakhly.activities_fragments.banquete.activity_buffet_banquete.BuffetActivity;
+import com.etbakhly.databinding.DialogLayoutBinding;
 import com.etbakhly.databinding.FragmnetServicesBanqueteBinding;
 import com.etbakhly.models.UserModel;
 import com.etbakhly.preferences.Preferences;
@@ -48,6 +50,35 @@ public class FragmentServices extends Fragment {
     }
 
 
+    private void createAlertDialog(Context context){
+        final AlertDialog dialog =new AlertDialog.Builder(context)
+                .create();
+        DialogLayoutBinding binding=DataBindingUtil.inflate(LayoutInflater.from(context),R.layout.dialog_layout,null,false);
+
+        binding.card1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+                Intent intent=new Intent(activity, BuffetActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        binding.card2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+                Intent intent=new Intent(activity, BanqueteBookActivity.class);
+                startActivity(intent);
+
+            }
+        });
+        dialog.getWindow().getAttributes().windowAnimations = R.style.dialog_congratulation_animation;
+        dialog.getWindow().setBackgroundDrawable(context.getResources().getDrawable(R.drawable.bg_dialog));
+        dialog.setCanceledOnTouchOutside(false);
+        dialog.setView(binding.getRoot());
+        dialog.show();
+    }
     private void initView() {
         list = new ArrayList<>();
         activity = (BanqueteKitchenDetialsActivity) getActivity();
@@ -55,18 +86,19 @@ public class FragmentServices extends Fragment {
         userModel = preferences.getUserData(activity);
         Paper.init(activity);
         lang = Paper.book().read("lang", "ar");
+
 binding.cardBuffet.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
-        Intent intent=new Intent(activity, BuffetActivity.class);
-        startActivity(intent);
+        createAlertDialog(activity);
+
+
     }
 });
         binding.cardBanquete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(activity, BanqueteBookActivity.class);
-                startActivity(intent);
+
             }
         });
     }

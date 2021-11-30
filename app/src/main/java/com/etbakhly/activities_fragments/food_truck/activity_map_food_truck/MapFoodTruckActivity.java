@@ -106,7 +106,7 @@ public class MapFoodTruckActivity extends AppCompatActivity implements OnMapRead
             }
         });
         binding.recviewCategories.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
-        binding.recviewCategories.setAdapter(new CategoriesAdapter(list, this));
+       // binding.recviewCategories.setAdapter(new CategoriesAdapter(list, this));
         binding.recView.setLayoutManager(new LinearLayoutManager(this));
         binding.recView.setAdapter(new FoodTruckMapAdapter(list, this));
         updateUI();

@@ -59,7 +59,7 @@ public class FoodTruckActivity extends AppCompatActivity {
        layoutManager =
                 new GridLayoutManager(this, 2, GridLayoutManager.HORIZONTAL, false);
         binding.recviewCategories.setLayoutManager(layoutManager);
-        binding.recviewCategories.setAdapter(new CategoriesAdapter(list, this));
+       // binding.recviewCategories.setAdapter(new CategoriesAdapter(list, this));
 
         binding.flfilter.setOnClickListener(new View.OnClickListener() {
             @Override

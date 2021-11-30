@@ -4,6 +4,7 @@
     <color name="colorPrimaryDark">#225B25</color>
     <color name="colorAccent">#2D7330</color>
 
+    <color name="cooo">#C1C1C1</color>
     <color name="color1">#DCECD7</color>
     <color name="color2">#F5FAFE</color>
     <color name="color3">#FF575A</color>
@@ -64,5 +65,6 @@
 
     <color name="gray1_trans">#ddf5f5f5</color>
     <color name="rate_color">#FFD800</color>
+    <color name="color00">#4FA13A</color>
 
 </resources>

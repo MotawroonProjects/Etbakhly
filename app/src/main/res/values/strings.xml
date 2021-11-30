@@ -53,7 +53,8 @@
     <string name="high_rate">High Rate</string>
     <string name="near">Near</string>
     <string name="done">Done</string>
-=    <string name="rate2">Rate</string>
+    =
+    <string name="rate2">Rate</string>
     <string name="delivery_method">Delivery method</string>
     <string name="delivery">Delivery</string>
     <string name="did_not_matter">Did not matter</string>
@@ -83,4 +84,14 @@
     <string name="choose_dishes">Choose Dishes</string>
     <string name="we_offer_you_a_food_cart_for_all_private_and_public_occasions">We offer you a food cart for all private and public occasions</string>
     <string name="Soon">Soon</string>
+    <string name="please_enter_the_verification_code_sent_to">Enter the 4-digit code sent to the number</string>
+    <string name="resend">Resend Code</string>
+    <string name="name">name</string>
+    <string name="email">Email</string>
+    <string name="gallery">Gallery</string>
+    <string name="camera">Camera</string>
+    <string name="cancel">Cancel</string>
+    <string name="perm_image_denied">Permission image denied</string>
+    <string name="user_found">Phone Found</string>
+
 </resources>

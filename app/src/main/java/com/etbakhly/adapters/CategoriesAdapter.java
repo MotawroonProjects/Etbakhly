@@ -10,20 +10,21 @@ import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.etbakhly.R;
-import com.etbakhly.databinding.CartIndependentRowBinding;
+import com.etbakhly.activities_fragments.banquete.activity_banquete_book.BanqueteBookActivity;
 import com.etbakhly.databinding.CategoriesRowBinding;
+import com.etbakhly.models.CategorDish;
 
 import java.util.List;
 
 public class CategoriesAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    private List<Object> list;
+    private List<CategorDish> list;
     private Context context;
     private LayoutInflater inflater;
 
     private int i = 0;
 
-    public CategoriesAdapter(List<Object> list, Context context) {
+    public CategoriesAdapter(List<CategorDish> list, Context context) {
         this.list = list;
         this.context = context;
         inflater = LayoutInflater.from(context);
@@ -46,6 +47,7 @@ public class CategoriesAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
 
         MyHolder myHolder = (MyHolder) holder;
+        myHolder.binding.setModel(list.get(position));
         myHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -56,6 +58,8 @@ public class CategoriesAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
         if (i == position) {
             ((MyHolder) holder).binding.card.setCardBackgroundColor(context.getResources().getColor(R.color.colorAccent));
             ((MyHolder) holder).binding.tv.setTextColor(context.getResources().getColor(R.color.white));
+            BanqueteBookActivity banqueteBookActivity=(BanqueteBookActivity) context;
+            banqueteBookActivity.show(list.get(position));
         } else {
             ((MyHolder) holder).binding.card.setCardBackgroundColor(context.getResources().getColor(R.color.gray6));
             ((MyHolder) holder).binding.tv.setTextColor(context.getResources().getColor(R.color.black));
@@ -66,7 +70,7 @@ public class CategoriesAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
 
     @Override
     public int getItemCount() {
-        return 20;
+        return list.size();
     }
 
     public static class MyHolder extends RecyclerView.ViewHolder {

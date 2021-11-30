@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="phone"
+            type="String" />
+        <variable
+            name="lang"
+            type="String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity_verification_code.VerificationCodeActivity"
+        android:background="@color/white">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:layout_margin="10dp"
+                android:background="@drawable/ic_left_arrow"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:rotation='@{lang.equals("ar")?180:0}' />
+
+            <ImageView
+                android:layout_marginTop="20dp"
+                android:id="@+id/logo"
+                android:layout_width="176dp"
+                android:layout_height="150dp"
+                android:src="@drawable/ic_logo_confirm"
+                android:layout_gravity="center_horizontal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/please_enter_the_verification_code_sent_to"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:text="@{phone}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="13sp"
+                    android:layout_marginTop="5dp" />
+
+                <com.chaos.view.PinView
+                    android:id="@+id/edtCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    app:viewType="rectangle"
+                    app:itemWidth="40dp"
+                    app:itemCount="6"
+                    app:itemHeight="40dp"
+                    app:itemRadius="5dp"
+                    app:itemSpacing="15dp"
+                    app:cursorColor="@color/colorAccent"
+                    app:hideLineWhenFilled="true"
+                    app:lineColor="@color/transparent"
+                    app:lineWidth="0dp"
+                    android:inputType="number"
+                    android:textSize="15sp"
+                    app:cursorWidth="2dp"
+                    android:textColor="@color/colorAccent"
+                    android:cursorVisible="true"
+                    style="@style/PinWidget.PinView"
+                    android:itemBackground="@drawable/pin_view_item"
+                    android:layout_gravity="center_horizontal" />
+
+                <Button
+
+                    android:textColor="@color/white"
+                    android:text="@string/login"
+                    android:id="@+id/loginBtn"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/btn_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_marginTop="25dp"
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/tvCounter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:text="00:00" />
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/tvResend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:text="@string/resend"
+                    android:textColor="@color/cooo" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

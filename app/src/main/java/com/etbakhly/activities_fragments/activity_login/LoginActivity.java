@@ -16,6 +16,7 @@ import androidx.databinding.DataBindingUtil;
 
 import com.etbakhly.R;
 
+import com.etbakhly.activity_verification_code.VerificationCodeActivity;
 import com.etbakhly.databinding.ActivityLoginBinding;
 import com.etbakhly.language.Language;
 import com.etbakhly.models.LoginModel;
@@ -33,7 +34,7 @@ public class LoginActivity extends AppCompatActivity {
 //    private List<CountryModel> countryModelList = new ArrayList<>();
 //    private CountriesAdapter countriesAdapter;
    // private AlertDialog dialog;
-    private String phone_code = "+966";
+    private String phone_code = "+20";
 
     protected void attachBaseContext(Context newBase) {
         Paper.init(newBase);
@@ -156,11 +157,11 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void navigateToConfirmCode() {
-//        Intent intent = new Intent(this, VerificationCodeActivity.class);
-//        intent.putExtra("phone", loginModel.getPhone());
-//        intent.putExtra("phone_code", loginModel.getPhone_code());
-//        startActivity(intent);
-//        finish();
+       Intent intent = new Intent(this, VerificationCodeActivity.class);
+       intent.putExtra("phone", loginModel.getPhone());
+       intent.putExtra("phone_code", loginModel.getPhone_code());
+       startActivity(intent);
+       finish();
     }
 
 

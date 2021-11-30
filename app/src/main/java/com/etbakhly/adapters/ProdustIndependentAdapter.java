@@ -2,6 +2,7 @@ package com.etbakhly.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -9,20 +10,21 @@ import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.etbakhly.R;
-import com.etbakhly.databinding.CartIndependentRowBinding;
+import com.etbakhly.activities_fragments.banquete.activity_banquete_book.BanqueteBookActivity;
 import com.etbakhly.databinding.ProductIndependentRowBinding;
+import com.etbakhly.models.Dish;
 
 import java.util.List;
 
 public class ProdustIndependentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    private List<Object> list;
+    private List<Dish> list;
     private Context context;
     private LayoutInflater inflater;
 
 
 
-    public ProdustIndependentAdapter(List<Object> list, Context context) {
+    public ProdustIndependentAdapter(List<Dish> list, Context context) {
         this.list = list;
         this.context = context;
         inflater = LayoutInflater.from(context);
@@ -44,15 +46,43 @@ public class ProdustIndependentAdapter extends RecyclerView.Adapter<RecyclerView
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
 
         MyHolder myHolder = (MyHolder) holder;
+        myHolder.binding.setModel(list.get(position));
+        ((MyHolder) holder).binding.tvAmount.setText("1");
 
+        myHolder.binding.imageIncrease.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Dish dish2=list.get(myHolder.getAdapterPosition());
+                if (context instanceof BanqueteBookActivity){
+                    BanqueteBookActivity bookActivity=(BanqueteBookActivity) context;
+                    int amount=Integer.parseInt(((MyHolder) holder).binding.tvAmount.getText().toString())+1;
+                    dish2.setQty(amount);
+                    ((MyHolder) holder).binding.tvAmount.setText(amount+"");
+                    bookActivity.increase_decrease(dish2,myHolder.getAdapterPosition());
+                }
 
+            }
+        });
 
+        myHolder.binding.imageDecrease.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Dish dish2=list.get(myHolder.getAdapterPosition());
+                if (context instanceof BanqueteBookActivity){
+                    BanqueteBookActivity bookActivity=(BanqueteBookActivity) context;
+                    int amount=Integer.parseInt(((MyHolder) holder).binding.tvAmount.getText().toString())-1;
+                    dish2.setQty(amount);
+                    ((MyHolder) holder).binding.tvAmount.setText(amount+"");
 
+                    bookActivity.increase_decrease(dish2,myHolder.getAdapterPosition());
+                }
+            }
+        });
     }
 
     @Override
     public int getItemCount() {
-        return 6;
+        return list.size();
     }
 
     public static class MyHolder extends RecyclerView.ViewHolder {

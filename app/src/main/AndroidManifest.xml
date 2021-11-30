@@ -18,89 +18,94 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
-        android:requestLegacyExternalStorage="true"
         tools:targetApi="m">
+        <activity
+            android:name=".activity_SignUp.SignUpActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity_verification_code.VerificationCodeActivity"
+            android:exported="true" />
         <activity
             android:name=".activities_fragments.food_truck.activity_food_truck_detialsActivity.FoodTruckDetialsActivity"
             android:configChanges="keyboardHidden|screenSize|orientation"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
         <activity
             android:name=".activities_fragments.food_truck.activity_food_truck.FoodTruckActivity"
             android:configChanges="keyboardHidden|screenSize|orientation"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
         <activity
             android:name=".activities_fragments.food_truck.activity_home_food_truck.HomeFoodTruckActivity"
             android:configChanges="keyboardHidden|screenSize|orientation"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
         <activity
             android:name=".activities_fragments.food_truck.activity_map_food_truck.MapFoodTruckActivity"
             android:configChanges="keyboardHidden|screenSize|orientation"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
         <activity
             android:name=".activities_fragments.banquete.activity_banquete_book.BanqueteBookActivity"
             android:configChanges="keyboardHidden|screenSize|orientation"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
         <activity
             android:name=".activities_fragments.banquete.activity_buffet_detials.BuffetDetialsActivity"
             android:configChanges="keyboardHidden|screenSize|orientation"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
         <activity
             android:name=".activities_fragments.banquete.activity_buffet_banquete.BuffetActivity"
             android:configChanges="keyboardHidden|screenSize|orientation"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
         <activity
             android:name=".activities_fragments.banquete.activity_banquete_kitchen_detialsActivity.BanqueteKitchenDetialsActivity"
             android:configChanges="keyboardHidden|screenSize|orientation"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
         <activity
             android:name=".activities_fragments.activity_splash.SplashActivity"
             android:configChanges="keyboardHidden|screenSize|orientation"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize">
+
+        </activity>
+        <activity
+            android:name=".activities_fragments.banquete.activity_home_banquete.HomeBanqueteActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".activities_fragments.independent.activity_chief_indepndent_detialsActivity.IndependentChiefDetialsActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".activities_fragments.independent.activity_chief_indepndent.IndependentChiefActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".activities_fragments.independent.activity_map.MapActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".activities_fragments.activity_intro_slider.IntroSliderActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".activities_fragments.activity_choose.ChooseActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".activities_fragments.independent.activity_home_independent.HomeActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".activities_fragments.activity_login.LoginActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".activities_fragments.banquete.activity_home_banquete.HomeBanqueteActivity"
-            android:configChanges="keyboardHidden|screenSize|orientation"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
-        <activity
-            android:name=".activities_fragments.independent.activity_chief_indepndent_detialsActivity.IndependentChiefDetialsActivity"
-            android:configChanges="keyboardHidden|screenSize|orientation"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
-        <activity
-            android:name=".activities_fragments.independent.activity_chief_indepndent.IndependentChiefActivity"
-            android:configChanges="keyboardHidden|screenSize|orientation"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
-        <activity
-            android:name=".activities_fragments.independent.activity_map.MapActivity"
-            android:configChanges="keyboardHidden|screenSize|orientation"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
-        <activity
-            android:name=".activities_fragments.activity_intro_slider.IntroSliderActivity"
-            android:configChanges="keyboardHidden|screenSize|orientation"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
-        <activity
-            android:name=".activities_fragments.activity_choose.ChooseActivity"
-            android:configChanges="keyboardHidden|screenSize|orientation"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
-
-        <activity
-            android:name=".activities_fragments.independent.activity_home_independent.HomeActivity"
-            android:configChanges="keyboardHidden|screenSize|orientation"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
-
-        <activity
-            android:name=".activities_fragments.activity_login.LoginActivity"
-            android:configChanges="keyboardHidden|screenSize|orientation"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
     </application>
-
 
 </manifest>

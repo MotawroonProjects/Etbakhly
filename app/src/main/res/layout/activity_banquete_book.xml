@@ -9,6 +9,9 @@
         <variable
             name="lang"
             type="String" />
+        <variable
+            name="model"
+            type="com.etbakhly.models.Dish" />
     </data>
 
     <FrameLayout
@@ -136,11 +139,10 @@
                                     android:textSize="13sp" />
 
                                 <TextView
+                                    android:id="@+id/tvTotal"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-
                                     android:gravity="center"
-                                    android:text="100"
                                     android:textColor="@color/gray33"
                                     android:textSize="13sp" />
 
